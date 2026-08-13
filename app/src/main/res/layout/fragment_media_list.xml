@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- ── Header / AppBar ── -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp"
+        app:liftOnScroll="true"
+        app:liftOnScrollTargetViewId="@id/recycler_view">
+
+        <!-- Toolbar row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_6sdp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_navigate_back"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/on_background" />
+
+            <!-- Title & Subtitle -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/on_background"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    tools:text="Large Files" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_item_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_10ssp"
+                    tools:text="248 items · 1.2 GB" />
+            </LinearLayout>
+
+            <!-- Sort Chip Button -->
+            <LinearLayout
+                android:id="@+id/btn_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/bg_sort_chip"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_sort"
+                    app:tint="@color/on_surface_variant" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_sort"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Select All Chip Button -->
+            <LinearLayout
+                android:id="@+id/btn_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/bg_sort_chip"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_select_all_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_all"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Selection Status Bar Overlay -->
+        <LinearLayout
+            android:id="@+id/layout_selection_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_selected_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:text="12 files selected" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_selected_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_count_pill"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/_10ssp"
+                tools:text="245 MB will be freed" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ── Content Frame ── -->
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_80sdp"
+            tools:listitem="@layout/item_media_grid" />
+
+        <!-- Loading State -->
+        <LinearLayout
+            android:id="@+id/layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                app:cardBackgroundColor="@color/surface_variant"
+                app:cardCornerRadius="@dimen/_18sdp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ProgressBar
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/primary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/state_scanning"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/state_scanning_desc"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <!-- Empty State -->
+        <LinearLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_24sdp"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:cardBackgroundColor="@color/surface_variant"
+                app:cardCornerRadius="@dimen/_24sdp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_check_circle"
+                    app:tint="@color/primary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/state_empty_title"
+                android:textColor="@color/on_background"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/state_empty_desc"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete_selected"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="@string/action_delete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/error"
+            app:cornerRadius="@dimen/_21sdp"
+            app:icon="@drawable/ic_delete"
+            app:iconGravity="textStart" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

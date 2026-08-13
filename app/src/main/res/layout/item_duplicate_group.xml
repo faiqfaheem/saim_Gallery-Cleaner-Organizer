@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp">
+
+        <!-- Duplicate Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_duplicate_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                tools:text="3 duplicate copies (12.4 MB)" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete_group"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:text="@string/action_delete_copies"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Duplicate Media Horizontal List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_duplicates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_media_grid" />
+
+        <!-- Pagination Dots Container -->
+        <LinearLayout
+            android:id="@+id/layout_dots_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

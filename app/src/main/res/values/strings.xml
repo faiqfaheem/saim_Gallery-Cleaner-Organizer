@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gallery Cleaner &amp; Organizer</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">Clean. Organize. Free Space.</string>
+    <string name="splash_privacy_note">100% on-device • No data collected</string>
+
+    <!-- Home -->
+
+    <!-- Categories -->
+    <string name="large_files">Large Files</string>
+    <string name="duplicates">Duplicate Photos</string>
+    <string name="similar_photos">Similar Photos</string>
+    <string name="blurry_photos">Blurry Photos</string>
+    <string name="screenshots">Screenshots</string>
+    <string name="videos">Videos</string>
+    <string name="downloads">Downloads</string>
+
+    <!-- Storage -->
+    <string name="storage_analysis">Storage Analysis</string>
+
+    <!-- Actions -->
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
+
+    <!-- Delete dialog -->
+
+    <!-- Sort -->
+    <string name="sort_newest">Newest First</string>
+    <string name="sort_oldest">Oldest First</string>
+    <string name="sort_largest">Largest First</string>
+    <string name="sort_smallest">Smallest First</string>
+    <string name="sort_name">Name A-Z</string>
+
+    <!-- Search -->
+
+    <!-- Empty states -->
+
+    <!-- Permission -->
+
+    <!-- Settings -->
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- WhatsApp tabs -->
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_storage">Storage</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Accessibility -->
+    <string name="cd_app_icon">App icon</string>
+    <string name="cd_file_thumbnail">File thumbnail</string>
+
+    <!-- Privacy policy text -->
+    <string name="privacy_last_updated">Last updated: July 2026</string>
+
+    <string name="cd_navigate_back">Navigate back</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_all">All</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="freed_space_success">Freed %1$s</string>
+    <string name="error_delete_failed">Could not delete some files</string>
+    <string name="error_prefix">Error: %1$s</string>
+
+    <string name="state_scanning">Scanning…</string>
+    <string name="state_scanning_desc">Finding files on your device</string>
+    <string name="state_empty_title">All clean!</string>
+    <string name="state_empty_desc">No files found in this category</string>
+
+    <string name="sort_dialog_title">Sort by</string>
+
+    <string name="delete_dialog_message">%1$d files (%2$s) will be permanently deleted. This action cannot be undone.</string>
+
+    <plurals name="selected_files_count">
+        <item quantity="one">1 file selected</item>
+        <item quantity="other">%d files selected</item>
+    </plurals>
+    <plurals name="delete_dialog_title">
+        <item quantity="one">Delete %d file?</item>
+        <item quantity="other">Delete %d files?</item>
+    </plurals>
+
+    <string name="action_delete_all_duplicates">Delete All Duplicates</string>
+
+    <string name="duplicates_tip_banner">Tap a photo to keep it. Others in the group will be deleted.</string>
+
+    <string name="duplicates_loading_title">Finding duplicates…</string>
+    <string name="duplicates_loading_desc">Comparing files using MD5 hashing</string>
+
+    <string name="duplicates_empty_title">No duplicates found</string>
+    <string name="duplicates_empty_desc">Your gallery has no exact duplicate photos</string>
+
+    <string name="delete_group_copies_message">Keep the best copy and free %1$s.</string>
+    <string name="action_delete_copies">Delete Copies</string>
+
+    <plurals name="delete_group_copies_title">
+        <item quantity="one">Delete 1 duplicate copy?</item>
+        <item quantity="other">Delete %d duplicate copies?</item>
+    </plurals>
+
+    <string name="move_to_trash_dialog_message">%1$d files (%2$s) will be moved to Trash.\nRecover them within 30 days from your gallery Trash.</string>
+    <string name="label_total_size">Total Size</string>
+    <string name="label_total_files">Total Files</string>
+</resources>

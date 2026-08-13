@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp"
+        app:liftOnScroll="true"
+        app:liftOnScrollTargetViewId="@id/nested_scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery Cleaner"
+                    android:textColor="@color/on_background"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_last_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_10ssp"
+                    tools:text="Scanned 2h ago" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_scan"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:text="Scan"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_18sdp"
+                app:icon="@drawable/ic_radar"
+                app:iconGravity="start"
+                app:iconSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Storage Info Header Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_4sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_24sdp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_storage_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_20sdp">
+
+                        <!-- Main Storage Readout Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.04"
+                                    android:text="Internal Storage"
+                                    android:textColor="#AAFFFFFF"
+                                    android:textSize="@dimen/_11ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_storage_used"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:lineSpacingMultiplier="0.9"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_34ssp"
+                                    android:textStyle="bold"
+                                    tools:text="14.2 GB" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_storage_of"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="#AAFFFFFF"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="of 64 GB · 49.8 GB free" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="@dimen/_88sdp"
+                                android:layout_height="@dimen/_88sdp">
+
+                                <com.google.android.material.progressindicator.CircularProgressIndicator
+                                    android:id="@+id/progress_circle"
+                                    android:layout_width="@dimen/_88sdp"
+                                    android:layout_height="@dimen/_88sdp"
+                                    android:indeterminate="false"
+                                    android:max="100"
+                                    android:progress="22"
+                                    app:indicatorColor="@android:color/white"
+                                    app:indicatorInset="0dp"
+                                    app:indicatorSize="@dimen/_88sdp"
+                                    app:trackColor="#33FFFFFF"
+                                    app:trackThickness="@dimen/_6sdp"
+                                    tools:progress="22" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tv_usage_percent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="@dimen/_16ssp"
+                                        android:textStyle="bold"
+                                        tools:text="22%" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="used"
+                                        android:textColor="#AAFFFFFF"
+                                        android:textSize="@dimen/_9ssp" />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <!-- Progress Bar -->
+                        <ProgressBar
+                            android:id="@+id/progress_storage"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progressBackgroundTint="#33FFFFFF"
+                            android:progressTint="#FFFFFF"
+                            tools:progress="22" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_free_storage"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="#AAFFFFFF"
+                                android:textSize="@dimen/_11ssp"
+                                tools:text="49.8 GB available" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginBottom="@dimen/_14sdp"
+                            android:background="#22FFFFFF" />
+
+                        <!-- 3-Stat Footer Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Photos -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_photos"
+                                    app:tint="#AAFFFFFF" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_photo_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_17ssp"
+                                    android:textStyle="bold"
+                                    tools:text="1,248" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Photos"
+                                    android:textColor="#AAFFFFFF"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="@dimen/_44sdp"
+                                android:background="#33FFFFFF" />
+
+                            <!-- Videos -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_video"
+                                    app:tint="#AAFFFFFF" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_video_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_17ssp"
+                                    android:textStyle="bold"
+                                    tools:text="86" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Videos"
+                                    android:textColor="#AAFFFFFF"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="@dimen/_44sdp"
+                                android:background="#33FFFFFF" />
+
+                            <!-- Junk Files -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_delete"
+                                    app:tint="#AAFFFFFF" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_junk_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_17ssp"
+                                    android:textStyle="bold"
+                                    tools:text="340" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Files"
+                                    android:textColor="#AAFFFFFF"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Trash Separator Divider -->
+                        <View
+                            android:id="@+id/divider_trash"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:background="#22FFFFFF" />
+
+                        <!-- Trash Navigation Row -->
+                        <LinearLayout
+                            android:id="@+id/row_trash"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_44sdp"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_4sdp"
+                            android:paddingEnd="@dimen/_4sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_delete"
+                                app:tint="#AAFFFFFF" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="View Trash"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_13ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_trash_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:textColor="#AAFFFFFF"
+                                android:textSize="@dimen/_11ssp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_arrow_right"
+                                app:tint="#AAFFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Scan Banner Progress Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_scan_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_14sdp">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_scan_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scanning…"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_scan"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/surface_variant"
+                            android:progressTint="@color/primary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category Section Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_12sdp">
+
+                <View
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/primary" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Clean Up"
+                    android:textColor="@color/on_background"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8 categories"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <!-- 2-Column Feature Cards Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:useDefaultMargins="false">
+
+                <include
+                    android:id="@+id/card_large_files"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_duplicates"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_similar"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_blurry"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_screenshots"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_videos"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_downloads"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <include
+                    android:id="@+id/card_whatsapp"
+                    layout="@layout/item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+            </GridLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

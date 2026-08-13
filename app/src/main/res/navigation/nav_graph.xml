@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.HomeFragment"
+        android:label="Home">
+
+        <!-- Large Files -->
+        <action
+            android:id="@+id/action_home_to_largeFiles"
+            app:destination="@id/largeFilesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Duplicates -->
+        <action
+            android:id="@+id/action_home_to_duplicates"
+            app:destination="@id/duplicatesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Similar Photos -->
+        <action
+            android:id="@+id/action_home_to_similar"
+            app:destination="@id/similarPhotosFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Blurry Photos -->
+        <action
+            android:id="@+id/action_home_to_blurry"
+            app:destination="@id/blurryPhotosFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Screenshots -->
+        <action
+            android:id="@+id/action_home_to_screenshots"
+            app:destination="@id/screenshotsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Videos -->
+        <action
+            android:id="@+id/action_home_to_videos"
+            app:destination="@id/videosFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Downloads -->
+        <action
+            android:id="@+id/action_home_to_downloads"
+            app:destination="@id/downloadsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- WhatsApp -->
+        <action
+            android:id="@+id/action_home_to_whatsapp"
+            app:destination="@id/whatsappFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Trash -->
+        <action
+            android:id="@+id/action_home_to_trash"
+            app:destination="@id/trashFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.SearchFragment"
+        android:label="Search" />
+
+    <fragment
+        android:id="@+id/storageFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.StorageFragment"
+        android:label="Storage Analysis" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.SettingsFragment"
+        android:label="Settings">
+
+        <!-- About -->
+        <action
+            android:id="@+id/action_settings_to_about"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Privacy Policy -->
+        <action
+            android:id="@+id/action_settings_to_privacy"
+            app:destination="@id/privacyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/largeFilesFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.LargeFilesFragment"
+        android:label="Large Files" />
+
+    <fragment
+        android:id="@+id/duplicatesFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.DuplicatesFragment"
+        android:label="Duplicates"
+        tools:layout="@layout/fragment_duplicates" />
+
+    <fragment
+        android:id="@+id/similarPhotosFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.SimilarPhotosFragment"
+        android:label="Similar Photos" />
+
+    <fragment
+        android:id="@+id/blurryPhotosFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.BlurryPhotosFragment"
+        android:label="Blurry Photos" />
+
+    <fragment
+        android:id="@+id/screenshotsFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.ScreenshotsFragment"
+        android:label="Screenshots" />
+
+    <fragment
+        android:id="@+id/videosFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.VideosFragment"
+        android:label="Videos" />
+
+    <fragment
+        android:id="@+id/downloadsFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.DownloadsFragment"
+        android:label="Downloads" />
+
+    <fragment
+        android:id="@+id/whatsappFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.WhatsAppFragment"
+        android:label="WhatsApp Media"
+        tools:layout="@layout/fragment_whatsapp" />
+
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.TrashFragment"
+        android:label="Trash"
+        tools:layout="@layout/fragment_trash" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.AboutFragment"
+        android:label="About" />
+
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.smart.gallery.cleaner.organizer.app.fragments.PrivacyFragment"
+        android:label="Privacy Policy" />
+
+</navigation>

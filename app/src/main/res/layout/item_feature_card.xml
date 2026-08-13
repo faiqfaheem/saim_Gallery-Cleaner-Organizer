@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/ripple_color"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
+
+        <!-- Icon Container -->
+        <FrameLayout
+            android:id="@+id/fl_icon_container"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_52sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/bg_feature_icon">
+
+            <ImageView
+                android:id="@+id/iv_feature_icon"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cd_app_icon"
+                tools:src="@drawable/ic_large_file" />
+        </FrameLayout>
+
+        <!-- Title -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_feature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            tools:text="Large Files" />
+
+        <!-- Default Description -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_feature_default_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/_11ssp"
+            tools:text="Files taking up the most space on your device" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/card_stroke" />
+
+        <!-- Files Count Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Count 1: Total Size -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_files_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/on_surface"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    tools:text="248 MB" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="@string/label_total_size"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <!-- Vertical Separator -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:background="@color/card_stroke" />
+
+            <!-- Count 2: Total Files -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_files_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/on_surface"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    tools:text="36 Files" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="@string/label_total_files"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
