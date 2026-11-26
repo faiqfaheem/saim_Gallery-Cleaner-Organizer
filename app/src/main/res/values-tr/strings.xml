@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galeri Temizleyici ve Düzenleyici</string>
+
+    <string name="splash_tagline">Yapay Zeka Temizlik • Düzenle • Yer Aç</string>
+    <string name="splash_privacy_note" formatted="false">%100 Cihaz İçi Yapay Zeka • Veri Toplanmaz</string>
+
+    <string name="home_title">AI Galeri Temizleyici</string>
+    <string name="home_tap_scan">Analiz için Tara\'ya dokunun</string>
+    <string name="home_just_scanned">Az önce yapay zeka ile tarandı</string>
+    <string name="home_scan_failed">Tarama başarısız — tekrar deneyin</string>
+    <string name="action_scan">Tara</string>
+    <string name="action_rescan">Yeniden Tara</string>
+    <string name="internal_storage">Dahili Depolama</string>
+    <string name="storage_of_format">%1$s içinde · %2$s boş</string>
+    <string name="storage_available_format">%1$s kullanılabilir</string>
+    <string name="storage_almost_full_warning">Depolama neredeyse dolu! AI Akıllı Temizlik\'i çalıştırın.</string>
+    <string name="label_used">kullanılan</string>
+    <string name="label_used_cap">Kullanılan</string>
+    <string name="label_free_cap">Boş</string>
+    <string name="label_total">Toplam</string>
+    <string name="label_photos">Fotoğraf</string>
+    <string name="label_files">Dosya</string>
+    <string name="action_view_trash">Çöp Kutusunu Gör</string>
+    <string name="section_clean_up">Akıllı Temizlik</string>
+    <string name="label_ten_categories">10 kategori</string>
+
+    <string name="ai_badge">AI</string>
+    <string name="ai_smart_clean_title">AI Akıllı Temizlik</string>
+    <string name="ai_smart_clean_banner_desc">Sağlık puanı ve tek dokunuşla temizlik</string>
+    <string name="ai_on_device_subtitle" formatted="false">%100 cihaz içi akıllı analiz</string>
+    <string name="ai_analyzing_title">Yapay zeka galerinizi analiz ediyor…</string>
+    <string name="ai_analyzing_desc">Kopyalar, bulanık, kötü ışıklı ve en iyi kareler tespit ediliyor</string>
+    <string name="ai_health_score_label">Galeri Sağlık Puanı</string>
+    <string name="ai_health_excellent">Mükemmel Durum</string>
+    <string name="ai_health_good">İyi Durum</string>
+    <string name="ai_health_needs_cleanup">Temizlik Gerekli</string>
+    <string name="ai_reclaimable_summary">%1$s kazanılabilir · %2$d öğe</string>
+    <string name="ai_recommendations_title">AI Temizlik Önerileri</string>
+    <string name="ai_rec_old_screenshots">Eski Ekran Görüntüleri (30+ gün)</string>
+    <string name="ai_clean_now">Şimdi AI Temizle</string>
+    <string name="ai_clean_now_size">AI Temizle · %1$s Yer Aç</string>
+    <string name="ai_gallery_optimized_title">Galeriniz tamamen optimize!</string>
+    <string name="ai_gallery_optimized_desc">Temizlenecek gereksiz veya kopya fotoğraf bulunamadı.</string>
+
+    <string name="ai_organizer_title">AI Düzenleyici</string>
+    <string name="ai_organizer_subtitle">Yapay zeka ile otomatik albümler</string>
+    <string name="ai_organizing_title">AI fotoğraflarınızı düzenliyor…</string>
+    <string name="ai_organizing_desc">Portreler, belgeler, doğa ve en iyi kareler bulunuyor</string>
+    <string name="ai_cat_portraits">Portreler ve Kişiler</string>
+    <string name="ai_cat_documents">Belgeler ve Notlar</string>
+    <string name="ai_cat_nature">Doğa ve Manzara</string>
+    <string name="ai_cat_social">Sosyal ve Memler</string>
+    <string name="ai_cat_best_shots">AI En İyi Kareler</string>
+
+    <string name="dark_photos">Kötü Işık</string>
+    <string name="large_files">Büyük Dosyalar</string>
+    <string name="duplicates">Kopya Fotoğraflar</string>
+    <string name="similar_photos">Benzer Fotoğraflar</string>
+    <string name="blurry_photos">Bulanık Fotoğraflar</string>
+    <string name="screenshots">Ekran Görüntüleri</string>
+    <string name="videos">Videolar</string>
+    <string name="downloads">İndirilenler</string>
+    <string name="whatsapp_short">WhatsApp</string>
+    <string name="whatsapp_media">WhatsApp Medyası</string>
+
+    <string name="card_desc_ai_organizer">AI akıllı albümler</string>
+    <string name="card_desc_dark_photos">Çok karanlık veya aşırı parlak</string>
+    <string name="card_desc_large_files">En büyük fotoğraf ve videolar</string>
+    <string name="card_desc_duplicates">Yer kaplayan birebir kopyalar</string>
+    <string name="card_desc_similar">AI En İyi Kare seçici</string>
+    <string name="card_desc_blurry">Odak dışı kareler</string>
+    <string name="card_desc_screenshots">Yakalanan ekranlar</string>
+    <string name="card_desc_videos">Tüm video dosyaları</string>
+    <string name="card_desc_downloads">İndirilen medya</string>
+    <string name="card_desc_whatsapp">Fotoğraflar ve videolar</string>
+
+    <string name="scan_step_photos">Fotoğraflar yükleniyor…</string>
+    <string name="scan_step_videos">Videolar yükleniyor…</string>
+    <string name="scan_step_large_files">Büyük dosyalar bulunuyor…</string>
+    <string name="scan_step_screenshots">Ekran görüntüleri taranıyor…</string>
+    <string name="scan_step_downloads">İndirilenler taranıyor…</string>
+    <string name="scan_step_whatsapp">WhatsApp medyası taranıyor…</string>
+    <string name="scan_step_duplicates">Kopyalar aranıyor…</string>
+    <string name="scan_step_similar">AI benzer fotoğrafları eşleştiriyor…</string>
+    <string name="scan_step_blurry">AI bulanık fotoğrafları kontrol ediyor…</string>
+    <string name="scan_step_dark_photos">AI ışık kalitesini inceliyor…</string>
+    <string name="scan_step_finalizing">AI Sağlık Puanı hesaplanıyor…</string>
+
+    <string name="storage_analysis">Depolama Analizi</string>
+    <string name="storage_reading">Depolama okunuyor…</string>
+    <string name="storage_overview">Depolama özeti</string>
+    <string name="storage_categories">Kategoriler</string>
+    <string name="storage_system_other">Sistem ve Diğer</string>
+    <string name="storage_internal_total">Dahili · Toplam %1$s</string>
+    <string name="storage_used_format">%1$s kullanıldı</string>
+    <string name="storage_free_format">%1$s boş</string>
+    <string name="storage_used_pct_format">%1$s dolu</string>
+
+    <string name="ai_smart_search_title">AI Akıllı Arama</string>
+    <string name="search_hint_ai">Ad, albüm, blurry, dark, doc ara…</string>
+    <string name="state_searching">Aranıyor…</string>
+    <string name="search_no_results">Sonuç bulunamadı</string>
+    <string name="search_empty_for_query">“%1$s” için dosya bulunamadı</string>
+    <string name="search_results_for">“%2$s” için %1$d sonuç</string>
+    <string name="filter_images">Görseller</string>
+    <string name="filter_gifs">GIF\'ler</string>
+    <string name="filter_dark">Karanlık</string>
+
+    <string name="select_all">Tümünü Seç</string>
+    <string name="deselect_all">Seçimi Kaldır</string>
+    <string name="action_sort">Sırala</string>
+    <string name="action_all">Tümü</string>
+    <string name="action_delete">Sil</string>
+    <string name="action_delete_all">Tümünü Sil</string>
+    <string name="action_cancel">İptal</string>
+    <string name="action_clear">Temizle</string>
+    <string name="action_restore">Geri Yükle</string>
+    <string name="action_continue">Devam Et</string>
+    <string name="action_keep_best">En İyiyi Tut</string>
+    <string name="action_cancelled">İşlem iptal edildi</string>
+
+    <string name="badge_blurry">Bulanık</string>
+    <string name="badge_keep">Tut</string>
+    <string name="badge_best_shot">★ En İyi</string>
+
+    <string name="sort_dialog_title">Sıralama</string>
+    <string name="sort_newest">En Yeni Önce</string>
+    <string name="sort_oldest">En Eski Önce</string>
+    <string name="sort_largest">En Büyük Önce</string>
+    <string name="sort_smallest">En Küçük Önce</string>
+    <string name="sort_name">Ad A-Z</string>
+
+    <string name="settings_section_appearance">GÖRÜNÜM</string>
+    <string name="settings_section_safety">GÜVENLİK</string>
+    <string name="settings_section_scan">TARAMA</string>
+    <string name="settings_section_alerts">UYARILAR</string>
+    <string name="settings_section_info">BİLGİ</string>
+
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_desc">Gündüz, Gece veya Sistem teması</string>
+    <string name="theme_system">Sistem</string>
+    <string name="theme_follow_system">Sistemi takip et</string>
+    <string name="theme_light">Açık (Gündüz)</string>
+    <string name="theme_dark">Koyu (Gece)</string>
+
+    <string name="settings_language">Dil</string>
+    <string name="settings_language_desc">Uygulama dilini seçin</string>
+    <string name="lang_system_default">Sistem Varsayılanı</string>
+    <string name="language_screen_title">Dil Seçin</string>
+    <string name="language_screen_subtitle">Tercih ettiğiniz uygulama dilini seçin</string>
+    <string name="language_search_hint">Dil ara…</string>
+    <string name="action_apply_language">Dili Uygula</string>
+
+    <string name="settings_confirm_delete">Silmeden önce onayla</string>
+    <string name="settings_confirm_delete_desc">Dosyaları silmeden önce sor</string>
+    <string name="settings_safe_delete">Güvenli silme (Çöp Kutusu)</string>
+    <string name="settings_safe_delete_desc">Kalıcı silmek yerine Çöp Kutusuna taşı</string>
+    <string name="safe_delete_requires_android_12">Android 12 veya üstü gerektirir</string>
+    <string name="settings_large_threshold">Büyük dosya eşiği</string>
+    <string name="settings_large_threshold_desc">Bundan büyük dosyalar işaretlenir</string>
+    <string name="settings_storage_warning">Depolama uyarısı</string>
+    <string name="settings_storage_warning_desc">Depolama dolduğunda uyar</string>
+    <string name="settings_about">Hakkında</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="settings_rate_app">Uygulamayı oyla</string>
+    <string name="settings_share_app">Uygulamayı paylaş</string>
+
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_search">Ara</string>
+    <string name="nav_storage">Depolama</string>
+    <string name="nav_settings">Ayarlar</string>
+
+    <string name="cd_app_icon">Uygulama simgesi</string>
+    <string name="cd_file_thumbnail">Küçük resim</string>
+    <string name="cd_navigate_back">Geri</string>
+
+    <string name="state_loading">Yükleniyor…</string>
+    <string name="state_scanning">Taranıyor…</string>
+    <string name="state_scanning_desc">Cihazınızdaki dosyalar bulunuyor</string>
+    <string name="state_empty_title">Tertemiz!</string>
+    <string name="state_empty_desc">Bu kategoride dosya bulunamadı</string>
+    <string name="freed_space_success">%1$s yer açıldı</string>
+    <string name="moved_to_trash_success">Çöp Kutusuna taşındı · %1$s kurtarılabilir</string>
+    <string name="error_delete_failed">Bazı dosyalar silinemedi</string>
+    <string name="error_prefix">Hata: %1$s</string>
+    <string name="items_size_format">%1$d öğe · %2$s</string>
+    <string name="will_be_freed_format">%1$s boşaltılacak</string>
+    <string name="selected_of_total_format">%2$d içinden %1$d seçili</string>
+    <string name="about_version_format">Sürüm %1$s</string>
+
+    <string name="action_delete_all_duplicates">Tüm Kopyaları Sil</string>
+    <string name="action_delete_all_similar">En İyileri Tut ve Fazlaları Sil</string>
+    <string name="action_delete_copies">Kopyaları Sil</string>
+    <string name="duplicates_tip_banner">Tutmak istediğiniz fotoğrafa dokunun; diğerleri silinir.</string>
+    <string name="similar_tip_banner">AI ★ En İyi Kareyi seçti. Değiştirmek için başka fotoğrafa dokunun.</string>
+    <string name="duplicates_loading_title">Kopyalar aranıyor…</string>
+    <string name="duplicates_loading_desc">Hızlı MD5 karşılaştırması yapılıyor</string>
+    <string name="similar_loading_title">AI benzer fotoğrafları arıyor…</string>
+    <string name="similar_loading_desc">Görsel benzerlik ve En İyi Kare analizi</string>
+    <string name="duplicates_empty_title">Kopya bulunamadı</string>
+    <string name="duplicates_empty_desc">Galerinizde kopya fotoğraf yok</string>
+    <string name="similar_empty_title">Benzer fotoğraf yok</string>
+    <string name="similar_empty_desc">Benzer fotoğraf grubu bulunamadı</string>
+    <string name="groups_wasted_summary">%1$d grup · %2$s harcanmış</string>
+    <string name="duplicate_group_header">%1$d kopya · %2$s harcanmış</string>
+    <string name="similar_group_header">%1$d benzer · %2$s kazanılabilir</string>
+    <string name="delete_group_copies_message">Seçilen kopyayı tutun ve %1$s yer açın.</string>
+
+    <string name="trash_title">Çöp Kutusu</string>
+    <string name="trash_empty_action">Çöpü Boşalt</string>
+    <string name="trash_auto_delete_banner">Öğeler 30 gün sonra kalıcı olarak silinir</string>
+    <string name="trash_empty_title">Çöp Kutusu boş</string>
+    <string name="trash_empty_dialog_title">Çöp Kutusu boşaltılsın mı?</string>
+    <string name="trash_restore_dialog_title">%1$d öğe geri yüklensin mi?</string>
+    <string name="trash_restore_dialog_msg">Dosyalar orijinal konumlarına geri yüklenecektir.</string>
+    <string name="delete_dialog_message">%1$d dosya (%2$s) kalıcı olarak silinecek. Bu işlem geri alınamaz.</string>
+    <string name="move_to_trash_dialog_message">%1$d dosya (%2$s) Çöp Kutusuna taşınacak.\n30 gün içinde geri yüklenebilir.</string>
+
+    <string name="perm_title">Fotoğraf ve Video İzni Gerekli</string>
+    <string name="perm_rationale_msg">Kopyaları ve büyük dosyaları taramak için fotoğraf ve videolara erişim gereklidir.</string>
+    <string name="perm_denied_title">İzin Reddedildi</string>
+    <string name="perm_denied_msg">Lütfen tarama için Uygulama Ayarlarından izni etkinleştirin.</string>
+    <string name="perm_grant">İzin Ver</string>
+    <string name="perm_not_now">Şimdi Değil</string>
+    <string name="perm_open_settings">Ayarları Aç</string>
+
+    <string name="privacy_last_updated">Son güncelleme: Temmuz 2026</string>
+    <string name="privacy_banner_title">Gizliliğiniz korunuyor</string>
+    <string name="privacy_banner_desc">Tüm yapay zeka işlemleri cihazınızda yapılır.\nHiçbir veri toplanmaz veya yüklenmez.</string>
+    <string name="privacy_accept_continue">Kabul Et ve Devam Et</string>
+    <string name="privacy_decline">Reddet</string>
+
+    <string name="label_total_size">Toplam Boyut</string>
+    <string name="label_total_files">Toplam Dosya</string>
+
+    <plurals name="selected_files_count">
+        <item quantity="one">1 dosya seçildi</item>
+        <item quantity="other">%d dosya seçildi</item>
+    </plurals>
+    <plurals name="delete_dialog_title">
+        <item quantity="one">%d dosya silinsin mi?</item>
+        <item quantity="other">%d dosya silinsin mi?</item>
+    </plurals>
+    <plurals name="delete_group_copies_title">
+        <item quantity="one">1 kopya silinsin mi?</item>
+        <item quantity="other">%d kopya silinsin mi?</item>
+    </plurals>
+    <plurals name="items_count">
+        <item quantity="one">1 öğe</item>
+        <item quantity="other">%d öğe</item>
+    </plurals>
+
+    <!-- Daily Localized Notifications -->
+    <string name="notif_channel_name">Günlük Galeri Hatırlatıcıları</string>
+    <string name="notif_channel_desc">Yinelenen ve bulanık fotoğrafları temizlemek, depolama açmak için günlük bildirimler.</string>
+    <string name="notif_daily_title_1">Tek Dokunuşla Depolama Alanı Açın</string>
+    <string name="notif_daily_msg_1">Yinelenen fotoğrafları, bulanık kareleri ve eski ekran görüntülerini bulmak için AI Akıllı Temizlik çalıştırın.</string>
+    <string name="notif_daily_title_2">Galerinizde Yinelenen Fotoğraflar mı Var?</string>
+    <string name="notif_daily_msg_2">Birebir kopyalar gizlice yer kaplar. Şimdi tarayın ve yalnızca orijinali güvenle saklayın.</string>
+    <string name="notif_daily_title_3">Yalnızca En Net En İyi Kareyi Saklayın</string>
+    <string name="notif_daily_msg_3">Benzer seri çekimler mi var? Cihaz içi yapay zeka en iyi kareyi seçip fazlalıkları temizlesin.</string>
+    <string name="notif_daily_title_4">Bulanık ve Odaksız Fotoğrafları Temizleyin</string>
+    <string name="notif_daily_msg_4">Titrek ve bulanık çekimleri otomatik tespit ederek galerinizi tertemiz tutun.</string>
+    <string name="notif_daily_title_5">Galeri Sağlık Puanınızı Kontrol Edin</string>
+    <string name="notif_daily_msg_5">Günlük AI Sağlık Puanınızı görün ve akıllı önerilerle boşa harcanan alanı geri kazanın.</string>
+    <string name="notif_daily_title_6">Eski Ekran Görüntüleri Birikiyor mu?</string>
+    <string name="notif_daily_msg_6">Haftalar öncesinden kalan gereksiz ekran görüntülerini saniyeler içinde temizleyin.</string>
+    <string name="notif_daily_title_7">Yer Kaplayan Büyük Videoları Bulun</string>
+    <string name="notif_daily_msg_7">Büyük videolar ve indirilenler alanı hızla doldurur. En büyük dosyalara göz atıp yer açın.</string>
+    <string name="notif_daily_title_8">WhatsApp Medyasını Temizleyin</string>
+    <string name="notif_daily_msg_8">İletilen WhatsApp fotoğraf ve videoları hızla birikir. İstenmeyen medyayı kolayca silin.</string>
+    <string name="notif_daily_title_9">Çok Karanlık veya Parlak Fotoğraflar mı Var?</string>
+    <string name="notif_daily_msg_9">AI kötü ışık algılama karanlık ve soluk fotoğrafları bulur, zahmetsizce düzenlemenizi sağlar.</string>
+    <string name="notif_daily_title_10">AI Düzenli Albümlerinizi Keşfedin</string>
+    <string name="notif_daily_msg_10">Portreler, Belgeler, Doğa ve En İyi Kareler tamamen çevrimdışı olarak cihazınızda düzenlendi.</string>
+</resources>

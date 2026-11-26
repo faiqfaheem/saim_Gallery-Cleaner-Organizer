@@ -1,62 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary brand — Luminous Mint Teal -->
+    <color name="primary">#2DD4BF</color>
+    <color name="primary_variant">#14B8A6</color>
+    <color name="primary_container">#112E2D</color>
+    <color name="on_primary">#042F2E</color>
+    <color name="on_primary_container">#CCFBF1</color>
 
-    <!-- Primary brand -->
-    <color name="primary">#8B80F9</color>
-    <color name="primary_variant">#7C6EF3</color>
-    <color name="on_primary">#FFFFFF</color>
+    <!-- Secondary — Warm Luminous Coral -->
+    <color name="secondary">#FF7A63</color>
+    <color name="secondary_variant">#F26449</color>
+    <color name="secondary_container">#361A16</color>
+    <color name="on_secondary">#FFFFFF</color>
 
-    <!-- Secondary -->
-    <color name="secondary">#22D3EE</color>
-    <color name="secondary_variant">#06B6D4</color>
-    <color name="on_secondary">#000000</color>
+    <!-- AI Accent & Spotlight Card Tints -->
+    <color name="ai_accent">#2DD4BF</color>
+    <color name="ai_start">#121824</color>
+    <color name="ai_center">#172836</color>
+    <color name="ai_end">#0F4C54</color>
+    <color name="ai_surface">#122C2D</color>
+    <color name="ai_card_start">#122A2E</color>
+    <color name="ai_card_end">#172336</color>
+    <color name="ai_card_stroke">#204349</color>
+    <color name="trash_card_start">#281820</color>
+    <color name="trash_card_end">#1E1829</color>
+    <color name="trash_card_stroke">#422533</color>
 
     <!-- Semantic -->
     <color name="success">#34D399</color>
-    <color name="success_light">#064E3B</color>
+    <color name="success_light">#0E2B22</color>
+    <color name="warning">#FBBF24</color>
+    <color name="warning_light">#2F240C</color>
+    <color name="error">#FB7185</color>
+    <color name="error_light">#35151E</color>
 
-    <color name="error">#F87171</color>
+    <!-- Night (Dark) Surfaces — Photo Darkroom Obsidian -->
+    <color name="background">#0A0E17</color>
+    <color name="surface">#141B29</color>
+    <color name="surface_elevated">#1B2436</color>
+    <color name="surface_variant">#1E283B</color>
+    <color name="on_background">#F8FAFC</color>
+    <color name="on_surface">#F1F5F9</color>
+    <color name="on_surface_variant">#94A3B8</color>
 
-    <!-- Background -->
-    <color name="background">#121212</color>
-    <color name="surface">#1E1E1E</color>
-    <color name="surface_variant">#2A2A2A</color>
+    <!-- Cards & Dividers -->
+    <color name="card_background">#141B29</color>
+    <color name="card_stroke">#243047</color>
+    <color name="divider">#1D273B</color>
 
-    <color name="on_background">#FFFFFF</color>
-    <color name="on_surface">#F3F4F6</color>
-    <color name="on_surface_variant">#B0B3B8</color>
-
-    <!-- Cards -->
-    <color name="card_background">#1E1E1E</color>
-    <color name="card_stroke">#343434</color>
-    <color name="divider">#2E2E2E</color>
-
-    <!-- Category Colors -->
-    <color name="color_large_files">#A78BFA</color>
-    <color name="color_duplicates">#F472B6</color>
-    <color name="color_similar">#FB923C</color>
-    <color name="color_blurry">#FACC15</color>
-    <color name="color_screenshots">#60A5FA</color>
+    <!-- Category Accent Colors -->
+    <color name="color_ai_organizer">#2DD4BF</color>
+    <color name="color_dark_photos">#94A3B8</color>
+    <color name="color_large_files">#FF7A63</color>
+    <color name="color_duplicates">#FB7185</color>
+    <color name="color_similar">#FBBF24</color>
+    <color name="color_blurry">#F59E0B</color>
+    <color name="color_screenshots">#38BDF8</color>
     <color name="color_videos">#F87171</color>
     <color name="color_downloads">#34D399</color>
     <color name="color_whatsapp">#4ADE80</color>
 
-    <!-- Gradient -->
+    <!-- Charts -->
+    <color name="chart_free_slice">#26324A</color>
+    <color name="chart_other_slice">#64748B</color>
 
     <!-- Navigation -->
-    <color name="nav_selected">#8B80F9</color>
-    <color name="nav_unselected">#7A7A7A</color>
+    <color name="nav_background">#101624</color>
+    <color name="nav_selected">#2DD4BF</color>
+    <color name="nav_unselected">#6C7A92</color>
+    <color name="nav_indicator">#112E2D</color>
 
     <!-- Selection -->
-    <color name="selection_overlay">#338B80F9</color>
+    <color name="selection_overlay">#382DD4BF</color>
 
-    <!-- Misc -->
+    <!-- Darkroom Hero & Splash Gradients -->
+    <color name="splash_bg">#0A0E17</color>
+    <color name="splash_end">#0D3D45</color>
 
-    <!-- Splash -->
-    <color name="splash_bg">#121212</color>
-
-    <color name="startColor">#5E35B1</color>
-    <color name="centerColor">#7C4DFF</color>
-    <color name="endColor">#1565C0</color>
-    <color name="ripple_dark">#1FFFFFFF</color>
+    <color name="startColor">#131B2A</color>
+    <color name="centerColor">#1A263C</color>
+    <color name="endColor">#0E3B43</color>
+    <color name="hero_ring">#2DD4BF</color>
+    <color name="ripple_dark">#222DD4BF</color>
 </resources>

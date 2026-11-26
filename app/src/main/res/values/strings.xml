@@ -3,12 +3,62 @@
     <string name="app_name">Gallery Cleaner &amp; Organizer</string>
 
     <!-- Splash -->
-    <string name="splash_tagline">Clean. Organize. Free Space.</string>
-    <string name="splash_privacy_note">100% on-device • No data collected</string>
+    <string name="splash_tagline">AI Clean • Organize • Free Space</string>
+    <string name="splash_privacy_note">100% on-device AI • No data collected</string>
 
     <!-- Home -->
+    <string name="home_title">AI Gallery Cleaner</string>
+    <string name="home_tap_scan">Tap Scan to analyze gallery</string>
+    <string name="home_just_scanned">Just scanned with AI</string>
+    <string name="home_scan_failed">Scan failed — tap to retry</string>
+    <string name="action_scan">Scan</string>
+    <string name="action_rescan">Rescan</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="storage_of_format">of %1$s · %2$s free</string>
+    <string name="storage_available_format">%1$s available</string>
+    <string name="storage_almost_full_warning">Storage is almost full! Run AI Smart Clean to free space.</string>
+    <string name="label_used">used</string>
+    <string name="label_used_cap">Used</string>
+    <string name="label_free_cap">Free</string>
+    <string name="label_total">Total</string>
+    <string name="label_photos">Photos</string>
+    <string name="label_files">Files</string>
+    <string name="action_view_trash">View Trash</string>
+    <string name="section_clean_up">Smart Clean Up</string>
+    <string name="label_ten_categories">10 categories</string>
 
-    <!-- Categories -->
+    <!-- AI Features -->
+    <string name="ai_badge">AI</string>
+    <string name="ai_smart_clean_title">AI Smart Clean</string>
+    <string name="ai_smart_clean_banner_desc">Health score &amp; 1-tap intelligent cleanup</string>
+    <string name="ai_on_device_subtitle">100% on-device smart analysis</string>
+    <string name="ai_analyzing_title">AI is analyzing your gallery…</string>
+    <string name="ai_analyzing_desc">Detecting duplicates, blur, bad lighting &amp; best shots</string>
+    <string name="ai_health_score_label">Gallery Health Score</string>
+    <string name="ai_health_excellent">Excellent Condition</string>
+    <string name="ai_health_good">Good Condition</string>
+    <string name="ai_health_needs_cleanup">Needs Cleanup</string>
+    <string name="ai_reclaimable_summary">%1$s reclaimable · %2$d items</string>
+    <string name="ai_recommendations_title">AI Cleanup Recommendations</string>
+    <string name="ai_rec_old_screenshots">Old Screenshots (30+ days)</string>
+    <string name="ai_clean_now">AI Clean Now</string>
+    <string name="ai_clean_now_size">AI Clean · Free %1$s</string>
+    <string name="ai_gallery_optimized_title">Gallery is fully optimized!</string>
+    <string name="ai_gallery_optimized_desc">AI found no junk, blurry, or duplicate photos to clean.</string>
+
+    <!-- AI Smart Organizer / Categories -->
+    <string name="ai_organizer_title">AI Organizer</string>
+    <string name="ai_organizer_subtitle">Auto-grouped on-device by AI</string>
+    <string name="ai_organizing_title">AI is organizing your photos…</string>
+    <string name="ai_organizing_desc">Detecting portraits, documents, nature &amp; best shots</string>
+    <string name="ai_cat_portraits">Portraits &amp; People</string>
+    <string name="ai_cat_documents">Documents &amp; Notes</string>
+    <string name="ai_cat_nature">Nature &amp; Scenery</string>
+    <string name="ai_cat_social">Memes &amp; Social</string>
+    <string name="ai_cat_best_shots">AI Best Shots</string>
+
+    <!-- Categories & Descriptions -->
+    <string name="dark_photos">Bad Lighting</string>
     <string name="large_files">Large Files</string>
     <string name="duplicates">Duplicate Photos</string>
     <string name="similar_photos">Similar Photos</string>
@@ -16,33 +66,118 @@
     <string name="screenshots">Screenshots</string>
     <string name="videos">Videos</string>
     <string name="downloads">Downloads</string>
+    <string name="whatsapp_short">WhatsApp</string>
+    <string name="whatsapp_media">WhatsApp Media</string>
+
+    <string name="card_desc_ai_organizer">Smart albums by AI</string>
+    <string name="card_desc_dark_photos">Too dark or washed out</string>
+    <string name="card_desc_large_files">Biggest photos &amp; videos</string>
+    <string name="card_desc_duplicates">Exact copies wasting space</string>
+    <string name="card_desc_similar">AI Best Shot picker</string>
+    <string name="card_desc_blurry">Out-of-focus shots</string>
+    <string name="card_desc_screenshots">Captured screens</string>
+    <string name="card_desc_videos">All video files</string>
+    <string name="card_desc_downloads">Downloaded media</string>
+    <string name="card_desc_whatsapp">Images &amp; videos</string>
+
+    <!-- Scan steps -->
+    <string name="scan_step_photos">Loading photos…</string>
+    <string name="scan_step_videos">Loading videos…</string>
+    <string name="scan_step_large_files">Finding large files…</string>
+    <string name="scan_step_screenshots">Scanning screenshots…</string>
+    <string name="scan_step_downloads">Scanning downloads…</string>
+    <string name="scan_step_whatsapp">Scanning WhatsApp media…</string>
+    <string name="scan_step_duplicates">Finding exact duplicates…</string>
+    <string name="scan_step_similar">AI matching similar photos…</string>
+    <string name="scan_step_blurry">AI detecting blurry photos…</string>
+    <string name="scan_step_dark_photos">AI checking photo lighting…</string>
+    <string name="scan_step_finalizing">Calculating AI Health Score…</string>
+    <string name="scan_files_progress_format">%1$d / %2$d done · %3$d left</string>
 
     <!-- Storage -->
     <string name="storage_analysis">Storage Analysis</string>
+    <string name="storage_reading">Reading storage…</string>
+    <string name="storage_overview">Storage overview</string>
+    <string name="storage_categories">Categories</string>
+    <string name="storage_system_other">System &amp; Other</string>
+    <string name="storage_internal_total">Internal · %1$s total</string>
+    <string name="storage_used_format">%1$s used</string>
+    <string name="storage_free_format">%1$s free</string>
+    <string name="storage_used_pct_format">%1$s used</string>
 
-    <!-- Actions -->
+    <!-- Search -->
+    <string name="ai_smart_search_title">AI Smart Search</string>
+    <string name="search_hint_ai">Search by name, album, blurry, dark, doc…</string>
+    <string name="state_searching">Searching…</string>
+    <string name="search_no_results">No results</string>
+    <string name="search_empty_for_query">No files found for “%1$s”</string>
+    <string name="search_results_for">%1$d results for “%2$s”</string>
+    <string name="filter_images">Images</string>
+    <string name="filter_gifs">GIFs</string>
+    <string name="filter_dark">Dark</string>
+
+    <!-- Actions & Common -->
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_all">All</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_delete_all">Delete All</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_restore">Restore</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_keep_best">Keep Best</string>
+    <string name="action_cancelled">Action cancelled</string>
 
-    <!-- Delete dialog -->
+    <!-- Badges -->
+    <string name="badge_blurry">Blurry</string>
+    <string name="badge_keep">Keep</string>
+    <string name="badge_best_shot">★ Best</string>
 
     <!-- Sort -->
+    <string name="sort_dialog_title">Sort by</string>
     <string name="sort_newest">Newest First</string>
     <string name="sort_oldest">Oldest First</string>
     <string name="sort_largest">Largest First</string>
     <string name="sort_smallest">Smallest First</string>
     <string name="sort_name">Name A-Z</string>
 
-    <!-- Search -->
+    <!-- Settings & Languages -->
+    <string name="settings_section_appearance">APPEARANCE</string>
+    <string name="settings_section_safety">SAFETY</string>
+    <string name="settings_section_scan">SCAN</string>
+    <string name="settings_section_alerts">ALERTS</string>
+    <string name="settings_section_info">INFO</string>
 
-    <!-- Empty states -->
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_desc">Day, Night or System theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_follow_system">Follow system</string>
+    <string name="theme_light">Light (Day)</string>
+    <string name="theme_dark">Dark (Night)</string>
 
-    <!-- Permission -->
+    <string name="settings_language">Language</string>
+    <string name="settings_language_desc">Choose app display language</string>
+    <string name="lang_system_default">System Default</string>
+    <string name="language_screen_title">Choose Language</string>
+    <string name="language_screen_subtitle">Select your preferred app language</string>
+    <string name="language_search_hint">Search language…</string>
+    <string name="action_apply_language">Apply Language</string>
 
-    <!-- Settings -->
+    <string name="settings_confirm_delete">Confirm before delete</string>
+    <string name="settings_confirm_delete_desc">Show a dialog before deleting files</string>
+    <string name="settings_safe_delete">Safe delete (Trash)</string>
+    <string name="settings_safe_delete_desc">Move to Trash instead of permanent delete</string>
+    <string name="safe_delete_requires_android_12">Safe delete (Trash) requires Android 12 or later</string>
+    <string name="settings_large_threshold">Large file threshold</string>
+    <string name="settings_large_threshold_desc">Files bigger than this are flagged</string>
+    <string name="settings_storage_warning">Storage warning</string>
+    <string name="settings_storage_warning_desc">Alert when storage is almost full</string>
+    <string name="settings_about">About</string>
     <string name="privacy_policy">Privacy Policy</string>
-
-    <!-- WhatsApp tabs -->
+    <string name="settings_rate_app">Rate this app</string>
+    <string name="settings_share_app">Share app</string>
 
     <!-- Navigation -->
     <string name="nav_home">Home</string>
@@ -53,29 +188,74 @@
     <!-- Accessibility -->
     <string name="cd_app_icon">App icon</string>
     <string name="cd_file_thumbnail">File thumbnail</string>
-
-    <!-- Privacy policy text -->
-    <string name="privacy_last_updated">Last updated: July 2026</string>
-
     <string name="cd_navigate_back">Navigate back</string>
-    <string name="action_sort">Sort</string>
-    <string name="action_all">All</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
 
-    <string name="freed_space_success">Freed %1$s</string>
-    <string name="error_delete_failed">Could not delete some files</string>
-    <string name="error_prefix">Error: %1$s</string>
-
+    <!-- States & Messages -->
+    <string name="state_loading">Loading…</string>
     <string name="state_scanning">Scanning…</string>
     <string name="state_scanning_desc">Finding files on your device</string>
     <string name="state_empty_title">All clean!</string>
     <string name="state_empty_desc">No files found in this category</string>
+    <string name="freed_space_success">Freed %1$s</string>
+    <string name="moved_to_trash_success">Moved to Trash · %1$s recoverable</string>
+    <string name="error_delete_failed">Could not delete some files</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="items_size_format">%1$d items · %2$s</string>
+    <string name="will_be_freed_format">%1$s will be freed</string>
+    <string name="selected_of_total_format">%1$d of %2$d selected</string>
+    <string name="about_version_format">Version %1$s</string>
 
-    <string name="sort_dialog_title">Sort by</string>
+    <!-- Duplicates & Similar -->
+    <string name="action_delete_all_duplicates">Delete All Duplicates</string>
+    <string name="action_delete_all_similar">Keep Best &amp; Clean All Extras</string>
+    <string name="action_delete_copies">Delete Copies</string>
+    <string name="duplicates_tip_banner">Tap a photo to keep it. Others in the group will be deleted.</string>
+    <string name="similar_tip_banner">AI picked the ★ Best Shot in each group. Tap any photo to change keeper.</string>
+    <string name="duplicates_loading_title">Finding duplicates…</string>
+    <string name="duplicates_loading_desc">Comparing files using fast MD5 hashing</string>
+    <string name="similar_loading_title">AI finding similar photos…</string>
+    <string name="similar_loading_desc">Analyzing perceptual hashes &amp; selecting Best Shots</string>
+    <string name="duplicates_empty_title">No duplicates found</string>
+    <string name="duplicates_empty_desc">Your gallery has no exact duplicate photos</string>
+    <string name="similar_empty_title">No similar photos found</string>
+    <string name="similar_empty_desc">Your gallery has no visually similar photo groups</string>
+    <string name="groups_wasted_summary">%1$d groups · %2$s wasted</string>
+    <string name="duplicate_group_header">%1$d copies · %2$s wasted</string>
+    <string name="similar_group_header">%1$d similar · %2$s reclaimable</string>
+    <string name="delete_group_copies_message">Keep the selected copy and free %1$s.</string>
 
+    <!-- Delete & Trash -->
+    <string name="trash_title">Trash</string>
+    <string name="trash_empty_action">Empty Trash</string>
+    <string name="trash_auto_delete_banner">Items are permanently deleted after 30 days</string>
+    <string name="trash_empty_title">Trash is empty</string>
+    <string name="trash_empty_dialog_title">Empty Trash?</string>
+    <string name="trash_restore_dialog_title">Restore %1$d item(s)?</string>
+    <string name="trash_restore_dialog_msg">Files will be restored to their original location.</string>
     <string name="delete_dialog_message">%1$d files (%2$s) will be permanently deleted. This action cannot be undone.</string>
+    <string name="move_to_trash_dialog_message">%1$d files (%2$s) will be moved to Trash.\nRecover them within 30 days from your gallery Trash.</string>
 
+    <!-- Permissions -->
+    <string name="perm_title">Photos &amp; Videos Permission Required</string>
+    <string name="perm_rationale_msg">Gallery Cleaner needs access to your photos and videos to scan for duplicates, large files, and junk media.</string>
+    <string name="perm_denied_title">Permission Denied</string>
+    <string name="perm_denied_msg">Permission to access photos and videos has been turned off. Please enable access in App Settings to scan your device.</string>
+    <string name="perm_grant">Grant Access</string>
+    <string name="perm_not_now">Not Now</string>
+    <string name="perm_open_settings">Open Settings</string>
+
+    <!-- Privacy -->
+    <string name="privacy_last_updated">Last updated: July 2026</string>
+    <string name="privacy_banner_title">Your privacy is protected</string>
+    <string name="privacy_banner_desc">All AI processing happens on your device.\nNo data is ever collected or uploaded.</string>
+    <string name="privacy_accept_continue">Accept &amp; Continue</string>
+    <string name="privacy_decline">Decline</string>
+
+    <!-- Labels -->
+    <string name="label_total_size">Total Size</string>
+    <string name="label_total_files">Total Files</string>
+
+    <!-- Plurals -->
     <plurals name="selected_files_count">
         <item quantity="one">1 file selected</item>
         <item quantity="other">%d files selected</item>
@@ -84,26 +264,36 @@
         <item quantity="one">Delete %d file?</item>
         <item quantity="other">Delete %d files?</item>
     </plurals>
-
-    <string name="action_delete_all_duplicates">Delete All Duplicates</string>
-
-    <string name="duplicates_tip_banner">Tap a photo to keep it. Others in the group will be deleted.</string>
-
-    <string name="duplicates_loading_title">Finding duplicates…</string>
-    <string name="duplicates_loading_desc">Comparing files using MD5 hashing</string>
-
-    <string name="duplicates_empty_title">No duplicates found</string>
-    <string name="duplicates_empty_desc">Your gallery has no exact duplicate photos</string>
-
-    <string name="delete_group_copies_message">Keep the best copy and free %1$s.</string>
-    <string name="action_delete_copies">Delete Copies</string>
-
     <plurals name="delete_group_copies_title">
         <item quantity="one">Delete 1 duplicate copy?</item>
         <item quantity="other">Delete %d duplicate copies?</item>
     </plurals>
+    <plurals name="items_count">
+        <item quantity="one">1 item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
 
-    <string name="move_to_trash_dialog_message">%1$d files (%2$s) will be moved to Trash.\nRecover them within 30 days from your gallery Trash.</string>
-    <string name="label_total_size">Total Size</string>
-    <string name="label_total_files">Total Files</string>
+    <!-- Daily Localized Notifications -->
+    <string name="notif_channel_name">Gallery Cleaner Daily Tips</string>
+    <string name="notif_channel_desc">Daily reminders to clean duplicates, blurry shots, and free up storage.</string>
+    <string name="notif_daily_title_1">Free Up Storage in One Tap</string>
+    <string name="notif_daily_msg_1">Run AI Smart Clean to spot duplicate photos, blurry shots, and old screenshots eating up space.</string>
+    <string name="notif_daily_title_2">Duplicate Photos Hiding in Your Gallery?</string>
+    <string name="notif_daily_msg_2">Exact copies quietly fill up gigabytes. Scan now and keep only the original photo safely.</string>
+    <string name="notif_daily_title_3">Keep Only Your Sharpest Best Shot</string>
+    <string name="notif_daily_msg_3">Took multiple burst photos? Let on-device AI pick the sharpest shot and remove the extra copies.</string>
+    <string name="notif_daily_title_4">Clear Out Blurry &amp; Out-of-Focus Photos</string>
+    <string name="notif_daily_msg_4">Clean up shaky or blurry camera shots automatically so your gallery stays crisp and organized.</string>
+    <string name="notif_daily_title_5">Check Your Gallery Health Score</string>
+    <string name="notif_daily_msg_5">See your daily AI Health Score and reclaim wasted storage with prioritized smart recommendations.</string>
+    <string name="notif_daily_title_6">Old Screenshots Piling Up?</string>
+    <string name="notif_daily_msg_6">Review forgotten screenshots from weeks ago and clear them out in seconds to keep your phone fast.</string>
+    <string name="notif_daily_title_7">Find Heavy Videos Taking Up Space</string>
+    <string name="notif_daily_msg_7">Large videos and downloads can quickly fill your phone. Review the biggest files first to free space fast.</string>
+    <string name="notif_daily_title_8">Clean Forwarded WhatsApp Media</string>
+    <string name="notif_daily_msg_8">Memes, videos, and forwarded photos from WhatsApp add up fast. Clean unwanted media with one quick check.</string>
+    <string name="notif_daily_title_9">Dark or Overexposed Shots in Your Camera Roll?</string>
+    <string name="notif_daily_msg_9">AI Bad Lighting detection spots overly dark or washed-out photos so you can tidy up effortlessly.</string>
+    <string name="notif_daily_title_10">Explore Your AI-Organized Albums</string>
+    <string name="notif_daily_msg_10" formatted="false">Browse Portraits, Documents, Nature, and Best Shots auto-sorted privately on your device — 100% offline.</string>
 </resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">गैलरी क्लीनर और ऑर्गनाइज़र</string>
+
+    <string name="splash_tagline">AI क्लीन • ऑर्गनाइज़ • स्पेस बचाएं</string>
+    <string name="splash_privacy_note">100% ऑन-डिवाइस AI • कोई डेटा संग्रह नहीं</string>
+
+    <string name="home_title">AI गैलरी क्लीनर</string>
+    <string name="home_tap_scan">गैलरी स्कैन करने के लिए टैप करें</string>
+    <string name="home_just_scanned">अभी AI से स्कैन किया गया</string>
+    <string name="home_scan_failed">स्कैन विफल — पुनः प्रयास करें</string>
+    <string name="action_scan">स्कैन</string>
+    <string name="action_rescan">फिर से स्कैन</string>
+    <string name="internal_storage">आंतरिक स्टोरेज</string>
+    <string name="storage_of_format">%1$s में से · %2$s खाली</string>
+    <string name="storage_available_format">%1$s उपलब्ध</string>
+    <string name="storage_almost_full_warning">स्टोरेज लगभग भर चुकी है! जगह खाली करने के लिए AI स्मार्ट क्लीन चलाएं।</string>
+    <string name="label_used">उपयोग</string>
+    <string name="label_used_cap">उपयोग</string>
+    <string name="label_free_cap">खाली</string>
+    <string name="label_total">कुल</string>
+    <string name="label_photos">फ़ोटो</string>
+    <string name="label_files">फ़ाइलें</string>
+    <string name="action_view_trash">ट्रैश देखें</string>
+    <string name="section_clean_up">स्मार्ट क्लीनअप</string>
+    <string name="label_ten_categories">10 श्रेणियाँ</string>
+
+    <string name="ai_badge">AI</string>
+    <string name="ai_smart_clean_title">AI स्मार्ट क्लीन</string>
+    <string name="ai_smart_clean_banner_desc">हेल्थ स्कोर और 1-टैप स्मार्ट सफाई</string>
+    <string name="ai_on_device_subtitle">100% ऑन-डिवाइस स्मार्ट विश्लेषण</string>
+    <string name="ai_analyzing_title">AI आपकी गैलरी का विश्लेषण कर रहा है…</string>
+    <string name="ai_analyzing_desc">डुप्लिकेट, धुंधली, कम रोशनी और बेस्ट शॉट्स की पहचान</string>
+    <string name="ai_health_score_label">गैलरी हेल्थ स्कोर</string>
+    <string name="ai_health_excellent">उत्कृष्ट स्थिति</string>
+    <string name="ai_health_good">अच्छी स्थिति</string>
+    <string name="ai_health_needs_cleanup">सफाई की आवश्यकता है</string>
+    <string name="ai_reclaimable_summary">%1$s बचाया जा सकता है · %2$d आइटम</string>
+    <string name="ai_recommendations_title">AI सफाई सुझाव</string>
+    <string name="ai_rec_old_screenshots">पुराने स्क्रीनशॉट (30+ दिन)</string>
+    <string name="ai_clean_now">अभी AI क्लीन करें</string>
+    <string name="ai_clean_now_size">AI क्लीन · %1$s खाली करें</string>
+    <string name="ai_gallery_optimized_title">गैलरी पूरी तरह से साफ है!</string>
+    <string name="ai_gallery_optimized_desc">AI को कोई जंक, धुंधली या डुप्लिकेट फ़ोटो नहीं मिली।</string>
+
+    <string name="ai_organizer_title">AI ऑर्गनाइज़र</string>
+    <string name="ai_organizer_subtitle">AI द्वारा स्वचालित एल्बम</string>
+    <string name="ai_organizing_title">AI फ़ोटो को व्यवस्थित कर रहा है…</string>
+    <string name="ai_organizing_desc">पोर्ट्रेट, दस्तावेज़, प्रकृति और बेस्ट शॉट्स की पहचान</string>
+    <string name="ai_cat_portraits">पोर्ट्रेट और लोग</string>
+    <string name="ai_cat_documents">दस्तावेज़ और नोट्स</string>
+    <string name="ai_cat_nature">प्रकृति और दृश्य</string>
+    <string name="ai_cat_social">मीम्स और सोशल</string>
+    <string name="ai_cat_best_shots">AI बेस्ट शॉट्स</string>
+
+    <string name="dark_photos">खराब रोशनी</string>
+    <string name="large_files">बड़ी फ़ाइलें</string>
+    <string name="duplicates">डुप्लिकेट फ़ोटो</string>
+    <string name="similar_photos">समान फ़ोटो</string>
+    <string name="blurry_photos">धुंधली फ़ोटो</string>
+    <string name="screenshots">स्क्रीनशॉट</string>
+    <string name="videos">वीडियो</string>
+    <string name="downloads">डाउनलोड</string>
+    <string name="whatsapp_short">व्हाट्सएप</string>
+    <string name="whatsapp_media">व्हाट्सएप मीडिया</string>
+
+    <string name="card_desc_ai_organizer">AI स्मार्ट एल्बम</string>
+    <string name="card_desc_dark_photos">बहुत अंधेरी या ज़्यादा चमकदार</string>
+    <string name="card_desc_large_files">सबसे बड़ी फ़ोटो और वीडियो</string>
+    <string name="card_desc_duplicates">जगह घेरने वाली कॉपियाँ</string>
+    <string name="card_desc_similar">AI बेस्ट शॉट चयन</string>
+    <string name="card_desc_blurry">आउट-ऑफ़-फोकस फ़ोटो</string>
+    <string name="card_desc_screenshots">कैप्चर की गई स्क्रीन</string>
+    <string name="card_desc_videos">सभी वीडियो फ़ाइलें</string>
+    <string name="card_desc_downloads">डाउनलोड किया गया मीडिया</string>
+    <string name="card_desc_whatsapp">फ़ोटो और वीडियो</string>
+
+    <string name="scan_step_photos">फ़ोटो लोड हो रही हैं…</string>
+    <string name="scan_step_videos">वीडियो लोड हो रहे हैं…</string>
+    <string name="scan_step_large_files">बड़ी फ़ाइलें खोजी जा रही हैं…</string>
+    <string name="scan_step_screenshots">स्क्रीनशॉट स्कैन हो रहे हैं…</string>
+    <string name="scan_step_downloads">डाउनलोड स्कैन हो रहे हैं…</string>
+    <string name="scan_step_whatsapp">व्हाट्सएप मीडिया स्कैन हो रहा है…</string>
+    <string name="scan_step_duplicates">डुप्लिकेट फ़ोटो खोजी जा रही हैं…</string>
+    <string name="scan_step_similar">AI समान फ़ोटो मिला रहा है…</string>
+    <string name="scan_step_blurry">AI धुंधली फ़ोटो जांच रहा है…</string>
+    <string name="scan_step_dark_photos">AI रोशनी की गुणवत्ता जांच रहा है…</string>
+    <string name="scan_step_finalizing">AI हेल्थ स्कोर तैयार हो रहा है…</string>
+
+    <string name="storage_analysis">स्टोरेज विश्लेषण</string>
+    <string name="storage_reading">स्टोरेज पढ़ा जा रहा है…</string>
+    <string name="storage_overview">स्टोरेज अवलोकन</string>
+    <string name="storage_categories">श्रेणियाँ</string>
+    <string name="storage_system_other">सिस्टम और अन्य</string>
+    <string name="storage_internal_total">आंतरिक · कुल %1$s</string>
+    <string name="storage_used_format">%1$s उपयोग</string>
+    <string name="storage_free_format">%1$s खाली</string>
+    <string name="storage_used_pct_format">%1$s उपयोग</string>
+
+    <string name="ai_smart_search_title">AI स्मार्ट खोज</string>
+    <string name="search_hint_ai">नाम, एल्बम, blurry, dark, doc खोजें…</string>
+    <string name="state_searching">खोजा जा रहा है…</string>
+    <string name="search_no_results">कोई परिणाम नहीं</string>
+    <string name="search_empty_for_query">“%1$s” के लिए कोई फ़ाइल नहीं मिली</string>
+    <string name="search_results_for">“%2$s” के %1$d परिणाम</string>
+    <string name="filter_images">फ़ोटो</string>
+    <string name="filter_gifs">GIFs</string>
+    <string name="filter_dark">अंधेरी</string>
+
+    <string name="select_all">सभी चुनें</string>
+    <string name="deselect_all">चयन हटाएं</string>
+    <string name="action_sort">क्रम</string>
+    <string name="action_all">सभी</string>
+    <string name="action_delete">हटाएं</string>
+    <string name="action_delete_all">सभी हटाएं</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_clear">साफ करें</string>
+    <string name="action_restore">पुनर्स्थापित करें</string>
+    <string name="action_continue">जारी रखें</string>
+    <string name="action_keep_best">बेस्ट रखें</string>
+    <string name="action_cancelled">कार्रवाई रद्द की गई</string>
+
+    <string name="badge_blurry">धुंधली</string>
+    <string name="badge_keep">रखें</string>
+    <string name="badge_best_shot">★ बेस्ट</string>
+
+    <string name="sort_dialog_title">क्रमबद्ध करें</string>
+    <string name="sort_newest">नवीनतम पहले</string>
+    <string name="sort_oldest">सबसे पुराना पहले</string>
+    <string name="sort_largest">सबसे बड़ा पहले</string>
+    <string name="sort_smallest">सबसे छोटा पहले</string>
+    <string name="sort_name">नाम A-Z</string>
+
+    <string name="settings_section_appearance">दिखावट</string>
+    <string name="settings_section_safety">सुरक्षा</string>
+    <string name="settings_section_scan">स्कैन</string>
+    <string name="settings_section_alerts">अलर्ट</string>
+    <string name="settings_section_info">जानकारी</string>
+
+    <string name="settings_theme">थीम</string>
+    <string name="settings_theme_desc">डे, नाइट या सिस्टम थीम</string>
+    <string name="theme_system">सिस्टम</string>
+    <string name="theme_follow_system">सिस्टम के अनुसार</string>
+    <string name="theme_light">लाइट (डे)</string>
+    <string name="theme_dark">डार्क (नाइट)</string>
+
+    <string name="settings_language">भाषा</string>
+    <string name="settings_language_desc">ऐप की भाषा चुनें</string>
+    <string name="lang_system_default">सिस्टम डिफ़ॉल्ट</string>
+    <string name="language_screen_title">भाषा चुनें</string>
+    <string name="language_screen_subtitle">ऐप के लिए अपनी पसंदीदा भाषा चुनें</string>
+    <string name="language_search_hint">भाषा खोजें…</string>
+    <string name="action_apply_language">भाषा लागू करें</string>
+
+    <string name="settings_confirm_delete">हटाने से पहले पुष्टि</string>
+    <string name="settings_confirm_delete_desc">फ़ाइलें हटाने से पहले संवाद दिखाएं</string>
+    <string name="settings_safe_delete">सुरक्षित हटाना (ट्रैश)</string>
+    <string name="settings_safe_delete_desc">स्थायी हटाने के बजाय ट्रैश में भेजें</string>
+    <string name="safe_delete_requires_android_12">सुरक्षित हटाना (ट्रैश) के लिए Android 12 या नया आवश्यक है</string>
+    <string name="settings_large_threshold">बड़ी फ़ाइल सीमा</string>
+    <string name="settings_large_threshold_desc">इससे बड़ी फ़ाइलें चिह्नित होंगी</string>
+    <string name="settings_storage_warning">स्टोरेज चेतावनी</string>
+    <string name="settings_storage_warning_desc">स्टोरेज भरने पर सूचित करें</string>
+    <string name="settings_about">ऐप के बारे में</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="settings_rate_app">ऐप को रेट करें</string>
+    <string name="settings_share_app">ऐप शेयर करें</string>
+
+    <string name="nav_home">होम</string>
+    <string name="nav_search">खोज</string>
+    <string name="nav_storage">स्टोरेज</string>
+    <string name="nav_settings">सेटिंग्स</string>
+
+    <string name="cd_app_icon">ऐप आइकन</string>
+    <string name="cd_file_thumbnail">फ़ाइल थंबनेल</string>
+    <string name="cd_navigate_back">वापस जाएं</string>
+
+    <string name="state_loading">लोड हो रहा है…</string>
+    <string name="state_scanning">स्कैन हो रहा है…</string>
+    <string name="state_scanning_desc">आपके डिवाइस पर फ़ाइलें खोजी जा रही हैं</string>
+    <string name="state_empty_title">सब साफ है!</string>
+    <string name="state_empty_desc">इस श्रेणी में कोई फ़ाइल नहीं मिली</string>
+    <string name="freed_space_success">%1$s खाली हो गया</string>
+    <string name="moved_to_trash_success">ट्रैश में भेजा गया · %1$s पुनर्प्राप्त करने योग्य</string>
+    <string name="error_delete_failed">कुछ फ़ाइलें हटाई नहीं जा सकीं</string>
+    <string name="error_prefix">त्रुटि: %1$s</string>
+    <string name="items_size_format">%1$d आइटम · %2$s</string>
+    <string name="will_be_freed_format">%1$s खाली होगा</string>
+    <string name="selected_of_total_format">%2$d में से %1$d चयनित</string>
+    <string name="about_version_format">संस्करण %1$s</string>
+
+    <string name="action_delete_all_duplicates">सभी डुप्लिकेट हटाएं</string>
+    <string name="action_delete_all_similar">बेस्ट रखें और बाकी हटाएं</string>
+    <string name="action_delete_copies">कॉपियाँ हटाएं</string>
+    <string name="duplicates_tip_banner">रखने के लिए फ़ोटो पर टैप करें, बाकी हटा दी जाएंगी।</string>
+    <string name="similar_tip_banner">AI ने हर समूह में ★ बेस्ट शॉट चुना है। बदलने के लिए टैप करें।</string>
+    <string name="duplicates_loading_title">डुप्लिकेट खोजे जा रहे हैं…</string>
+    <string name="duplicates_loading_desc">तेज़ MD5 हैशिंग से फ़ाइलों की तुलना</string>
+    <string name="similar_loading_title">AI समान फ़ोटो खोज रहा है…</string>
+    <string name="similar_loading_desc">दृश्य समानता और बेस्ट शॉट विश्लेषण</string>
+    <string name="duplicates_empty_title">कोई डुप्लिकेट नहीं मिला</string>
+    <string name="duplicates_empty_desc">आपकी गैलरी में कोई डुप्लिकेट फ़ोटो नहीं है</string>
+    <string name="similar_empty_title">कोई समान फ़ोटो नहीं मिली</string>
+    <string name="similar_empty_desc">आपकी गैलरी में समान फ़ोटो का कोई समूह नहीं है</string>
+    <string name="groups_wasted_summary">%1$d समूह · %2$s बर्बाद</string>
+    <string name="duplicate_group_header">%1$d कॉपियाँ · %2$s बर्बाद</string>
+    <string name="similar_group_header">%1$d समान · %2$s बचत</string>
+    <string name="delete_group_copies_message">चुनी हुई कॉपी रखें और %1$s खाली करें।</string>
+
+    <string name="trash_title">ट्रैश</string>
+    <string name="trash_empty_action">ट्रैश खाली करें</string>
+    <string name="trash_auto_delete_banner">आइटम 30 दिनों के बाद स्थायी रूप से हटा दिए जाते हैं</string>
+    <string name="trash_empty_title">ट्रैश खाली है</string>
+    <string name="trash_empty_dialog_title">ट्रैश खाली करें?</string>
+    <string name="trash_restore_dialog_title">%1$d आइटम पुनर्स्थापित करें?</string>
+    <string name="trash_restore_dialog_msg">फ़ाइलें उनके मूल स्थान पर बहाल हो जाएंगी।</string>
+    <string name="delete_dialog_message">%1$d फ़ाइलें (%2$s) स्थायी रूप से हटा दी जाएंगी। यह पूर्ववत नहीं किया जा सकता।</string>
+    <string name="move_to_trash_dialog_message">%1$d फ़ाइलें (%2$s) ट्रैश में भेजी जाएंगी।\n30 दिनों के भीतर पुनर्प्राप्त करें।</string>
+
+    <string name="perm_title">फ़ोटो और वीडियो की अनुमति आवश्यक</string>
+    <string name="perm_rationale_msg">डुप्लिकेट और बड़ी फ़ाइलें स्कैन करने के लिए फ़ोटो और वीडियो की अनुमति आवश्यक है।</string>
+    <string name="perm_denied_title">अनुमति अस्वीकृत</string>
+    <string name="perm_denied_msg">कृपया स्कैन करने के लिए ऐप सेटिंग्स में अनुमति चालू करें।</string>
+    <string name="perm_grant">अनुमति दें</string>
+    <string name="perm_not_now">अभी नहीं</string>
+    <string name="perm_open_settings">सेटिंग्स खोलें</string>
+
+    <string name="privacy_last_updated">अंतिम अपडेट: जुलाई 2026</string>
+    <string name="privacy_banner_title">आपकी गोपनीयता सुरक्षित है</string>
+    <string name="privacy_banner_desc">सारी AI प्रोसेसिंग आपके डिवाइस पर होती है।\nकोई डेटा एकत्र या अपलोड नहीं किया जाता।</string>
+    <string name="privacy_accept_continue">स्वीकार करें और जारी रखें</string>
+    <string name="privacy_decline">अस्वीकार करें</string>
+
+    <string name="label_total_size">कुल आकार</string>
+    <string name="label_total_files">कुल फ़ाइलें</string>
+
+    <plurals name="selected_files_count">
+        <item quantity="one">1 फ़ाइल चयनित</item>
+        <item quantity="other">%d फ़ाइलें चयनित</item>
+    </plurals>
+    <plurals name="delete_dialog_title">
+        <item quantity="one">%d फ़ाइल हटाएं?</item>
+        <item quantity="other">%d फ़ाइलें हटाएं?</item>
+    </plurals>
+    <plurals name="delete_group_copies_title">
+        <item quantity="one">1 डुप्लिकेट कॉपी हटाएं?</item>
+        <item quantity="other">%d डुप्लिकेट कॉपियाँ हटाएं?</item>
+    </plurals>
+    <plurals name="items_count">
+        <item quantity="one">1 आइटम</item>
+        <item quantity="other">%d आइटम</item>
+    </plurals>
+
+    <!-- Daily Localized Notifications -->
+    <string name="notif_channel_name">गैलरी क्लीनर दैनिक रिमाइंडर</string>
+    <string name="notif_channel_desc">डुप्लिकेट, धुंधली फ़ोटो साफ़ करने और स्टोरेज खाली करने के लिए दैनिक रिमाइंडर।</string>
+    <string name="notif_daily_title_1">एक टैप में स्टोरेज खाली करें</string>
+    <string name="notif_daily_msg_1">AI स्मार्ट क्लीन चलाएं और डुप्लिकेट फ़ोटो, धुंधली तस्वीरें और पुराने स्क्रीनशॉट आसानी से हटाएं।</string>
+    <string name="notif_daily_title_2">क्या आपकी गैलरी में डुप्लिकेट फ़ोटो हैं?</string>
+    <string name="notif_daily_msg_2">एक जैसी फ़ोटो चुपचाप बहुत जगह घेरती हैं। अभी स्कैन करें और केवल असली फ़ोटो सुरक्षित रखें।</string>
+    <string name="notif_daily_title_3">केवल सबसे साफ़ और बेस्ट शॉट रखें</string>
+    <string name="notif_daily_msg_3">मिलती-जुलती तस्वीरों में से AI को बेस्ट शॉट चुनने दें और अतिरिक्त कॉपियां हटाएं।</string>
+    <string name="notif_daily_title_4">धुंधली और खराब फ़ोटो साफ़ करें</string>
+    <string name="notif_daily_msg_4">आउट-ऑफ-फ़ोकस और धुंधली तस्वीरों को ऑटोमैटिक पहचानें और गैलरी को व्यवस्थित रखें।</string>
+    <string name="notif_daily_title_5">अपना गैलरी हेल्थ स्कोर देखें</string>
+    <string name="notif_daily_msg_5">आज का AI हेल्थ स्कोर जांचें और स्मार्ट सुझावों से बेकार भरा स्टोरेज वापस पाएं।</string>
+    <string name="notif_daily_title_6">पुराने स्क्रीनशॉट जमा हो रहे हैं?</string>
+    <string name="notif_daily_msg_6">हफ्तों पुराने बेकार स्क्रीनशॉट कुछ सेकंड में हटाएं और फोन को हल्का रखें।</string>
+    <string name="notif_daily_title_7">बड़े वीडियो और फ़ाइलें खोजें</string>
+    <string name="notif_daily_msg_7">बड़े वीडियो और डाउनलोड तेजी से स्टोरेज भरते हैं। सबसे बड़ी फ़ाइलें देखकर तुरंत जगह खाली करें।</string>
+    <string name="notif_daily_title_8">WhatsApp का फ़ालतू मीडिया साफ़ करें</string>
+    <string name="notif_daily_msg_8">WhatsApp से आए फॉरवर्ड वीडियो और फ़ोटो जल्दी जगह घेरते हैं। अनचाहा मीडिया आसानी से हटाएं।</string>
+    <string name="notif_daily_title_9">अंधेरी या खराब लाइटिंग वाली फ़ोटो?</string>
+    <string name="notif_daily_msg_9">AI खराब लाइटिंग डिटेक्शन ज्यादा अंधेरी या धुंधली फ़ोटो ढूंढकर सफाई आसान बनाता है।</string>
+    <string name="notif_daily_title_10">AI द्वारा व्यवस्थित एल्बम देखें</string>
+    <string name="notif_daily_msg_10" formatted="false">पोर्ट्रेट, दस्तावेज़, प्रकृति और बेस्ट शॉट्स को 100% ऑफ़लाइन और सुरक्षित रूप से ब्राउज़ करें।</string>
+</resources>

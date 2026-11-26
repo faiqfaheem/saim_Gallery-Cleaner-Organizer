@@ -67,7 +67,9 @@ class PrivacyFragment : Fragment() {
             }
 
             binding.btnAcceptContinue.visibility = View.VISIBLE
-            binding.btnAcceptContinue.text = if (isAccepted) "Continue" else "Accept & Continue"
+            binding.btnAcceptContinue.text = getString(
+                if (isAccepted) R.string.action_continue else R.string.privacy_accept_continue
+            )
             binding.btnDecline.visibility = if (isAccepted) {
                 View.GONE
             } else {
@@ -102,33 +104,23 @@ class PrivacyFragment : Fragment() {
     }
 
     private fun continueToApp() {
-
-        val activity = requireActivity() as? MainActivity ?: return
-
-        val navController = findNavController()
-
-        if (navController.currentDestination?.id != R.id.privacyFragment) {
-            return
+        val activity = activity as? MainActivity ?: return
+        if (!isAdded) return
+        runCatching {
+            val navController = findNavController()
+            if (navController.currentDestination?.id != R.id.privacyFragment) {
+                return
+            }
+            activity.onPrivacyAccepted()
+            navController.navigate(
+                R.id.homeFragment,
+                null,
+                NavOptions.Builder()
+                    .setPopUpTo(R.id.privacyFragment, true)
+                    .setLaunchSingleTop(true)
+                    .build()
+            )
         }
-
-        activity.onPrivacyAccepted()
-
-        navController.navigate(
-
-            R.id.homeFragment,
-
-            null,
-
-            NavOptions.Builder()
-
-                .setPopUpTo(
-                    R.id.privacyFragment, true
-                )
-
-                .setLaunchSingleTop(true)
-
-                .build()
-        )
     }
 
     private fun handleDecline() {

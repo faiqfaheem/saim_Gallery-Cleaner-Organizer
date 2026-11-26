@@ -1,59 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary brand — Deep Violet -->
-    <color name="primary">#5B4FCF</color>
-    <color name="primary_variant">#4338CA</color>
+    <!-- Primary brand — Rich Studio Emerald Teal -->
+    <color name="primary">#0B8A7E</color>
+    <color name="primary_variant">#096D64</color>
+    <color name="primary_container">#CDECE8</color>
     <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#063B36</color>
 
-    <!-- Secondary — Electric Cyan -->
-    <color name="secondary">#06B6D4</color>
-    <color name="secondary_variant">#0891B2</color>
+    <!-- Secondary — Warm Sunset Coral -->
+    <color name="secondary">#E85A42</color>
+    <color name="secondary_variant">#C9442E</color>
+    <color name="secondary_container">#FADFD9</color>
     <color name="on_secondary">#FFFFFF</color>
 
+    <!-- AI Accent & Spotlight Card Tints -->
+    <color name="ai_accent">#0B8A7E</color>
+    <color name="ai_start">#121826</color>
+    <color name="ai_center">#172B3A</color>
+    <color name="ai_end">#0D6E68</color>
+    <color name="ai_surface">#CDECE8</color>
+    <color name="ai_card_start">#CFECE8</color>
+    <color name="ai_card_end">#D7E6F3</color>
+    <color name="ai_card_stroke">#B4DCD7</color>
+    <color name="trash_card_start">#F5E1E1</color>
+    <color name="trash_card_end">#EFE4EB</color>
+    <color name="trash_card_stroke">#E4C5C8</color>
+
     <!-- Semantic -->
-    <color name="success">#10B981</color>
-    <color name="success_light">#D1FAE5</color>
-    <color name="error">#EF4444</color>
+    <color name="success">#0D9468</color>
+    <color name="success_light">#D2F1E6</color>
+    <color name="warning">#D97706</color>
+    <color name="warning_light">#FBE8C2</color>
+    <color name="error">#DC2626</color>
+    <color name="error_light">#FADAD8</color>
 
-    <!-- Light surfaces -->
-    <color name="background">#F8F7FF</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="surface_variant">#EEF0FF</color>
-    <color name="on_background">#1A1033</color>
-    <color name="on_surface">#1A1033</color>
-    <color name="on_surface_variant">#6B7280</color>
+    <!-- Day (Light) Surfaces — Soft Tinted Cool Mist (Zero Harsh Stark White!) -->
+    <color name="background">#DCE5EA</color>
+    <color name="surface">#EDF2F5</color>
+    <color name="surface_elevated">#F2F6F8</color>
+    <color name="surface_variant">#CFDCE3</color>
+    <color name="on_background">#111824</color>
+    <color name="on_surface">#1A2332</color>
+    <color name="on_surface_variant">#516072</color>
 
-    <!-- Cards -->
-    <color name="card_background">#FFFFFF</color>
-    <color name="card_stroke">#E5E7EB</color>
-    <color name="divider">#E5E7EB</color>
+    <!-- Cards & Dividers -->
+    <color name="card_background">#EDF2F5</color>
+    <color name="card_stroke">#C9D7DF</color>
+    <color name="divider">#CCD9E0</color>
 
-    <!-- Category accent colours -->
-    <color name="color_large_files">#8B5CF6</color>
-    <color name="color_duplicates">#EC4899</color>
-    <color name="color_similar">#F97316</color>
-    <color name="color_blurry">#EAB308</color>
-    <color name="color_screenshots">#3B82F6</color>
-    <color name="color_videos">#EF4444</color>
-    <color name="color_downloads">#10B981</color>
-    <color name="color_whatsapp">#22C55E</color>
+    <!-- Category Accent Colors -->
+    <color name="color_ai_organizer">#0B8A7E</color>
+    <color name="color_dark_photos">#475569</color>
+    <color name="color_large_files">#E85A42</color>
+    <color name="color_duplicates">#D92662</color>
+    <color name="color_similar">#D97706</color>
+    <color name="color_blurry">#C26A0A</color>
+    <color name="color_screenshots">#0284C7</color>
+    <color name="color_videos">#DC2626</color>
+    <color name="color_downloads">#059669</color>
+    <color name="color_whatsapp">#16A34A</color>
 
-    <!-- Gradient -->
+    <!-- Charts -->
+    <color name="chart_free_slice">#C9D7DF</color>
+    <color name="chart_other_slice">#7C8EA0</color>
 
-    <!-- Navigation -->
-    <color name="nav_selected">#5B4FCF</color>
-    <color name="nav_unselected">#9CA3AF</color>
+    <!-- Navigation — Soft Tinted Slate Bar -->
+    <color name="nav_background">#E5EDF1</color>
+    <color name="nav_selected">#0B8A7E</color>
+    <color name="nav_unselected">#647486</color>
+    <color name="nav_indicator">#C5E6E2</color>
 
     <!-- Selection -->
-    <color name="selection_overlay">#1A5B4FCF</color>
+    <color name="selection_overlay">#2C0B8A7E</color>
 
-    <!-- Misc -->
+    <!-- Darkroom Hero & Splash Gradients -->
+    <color name="splash_bg">#101722</color>
+    <color name="splash_end">#0D4F56</color>
 
-    <!-- Splash bg -->
-    <color name="splash_bg">#5B4FCF</color>
-
-    <color name="startColor">#5B4FCF</color>
-    <color name="centerColor">#6D3FCE</color>
-    <color name="endColor">#3B82C4</color>
-    <color name="ripple_dark">#1A000000</color>
+    <color name="startColor">#131A28</color>
+    <color name="centerColor">#1A263A</color>
+    <color name="endColor">#0E3F47</color>
+    <color name="hero_ring">#2DD4BF</color>
+    <color name="ripple_dark">#1A0B8A7E</color>
 </resources>

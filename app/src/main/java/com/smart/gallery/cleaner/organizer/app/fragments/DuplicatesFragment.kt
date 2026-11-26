@@ -20,7 +20,6 @@ import com.smart.gallery.cleaner.organizer.app.adapter.DuplicateGroupAdapter
 import com.smart.gallery.cleaner.organizer.app.data.model.DuplicateGroup
 import com.smart.gallery.cleaner.organizer.app.data.model.MediaFile
 import com.smart.gallery.cleaner.organizer.app.databinding.FragmentDuplicatesBinding
-import com.smart.gallery.cleaner.organizer.app.utils.InsetsHelper
 import com.smart.gallery.cleaner.organizer.app.utils.visibleIf
 import com.smart.gallery.cleaner.organizer.app.viewmodel.MediaViewModel
 import com.smart.gallery.cleaner.organizer.app.viewmodel.PendingIntentException
@@ -62,50 +61,77 @@ class DuplicatesFragment : Fragment() {
 
         adapter = DuplicateGroupAdapter(
             onDeleteGroup = { group -> confirmDeleteGroup(group) },
-            onKeepFile = { _, _ -> /* future: mark as keeper */ }
+            onKeepFile = { file, group -> vm.setDuplicateGroupKeeper(group.groupId, file.id) }
         )
         binding.rvGroups.layoutManager = LinearLayoutManager(requireContext())
         binding.rvGroups.adapter = adapter
 
+        binding.btnDeleteAllDuplicates.setOnClickListener {
+            val allExtras = vm.duplicateGroups.value.orEmpty().flatMap { g ->
+                g.files.filter { it.id != g.keepFileId }
+            }
+            if (allExtras.isNotEmpty()) {
+                vm.deleteFiles(allExtras)
+            }
+        }
+
         observeViewModel()
-        vm.loadDuplicates()
+        if (!vm.hasLoadedDuplicates && vm.loading.value != true) {
+            vm.loadDuplicates()
+        }
     }
 
     private fun observeViewModel() {
         vm.loading.observe(viewLifecycleOwner) { loading ->
             binding.layoutLoading.visibleIf(loading)
             val groups = vm.duplicateGroups.value.orEmpty()
-            binding.layoutEmpty.visibleIf(!loading && groups.isEmpty())
+            binding.layoutEmpty.visibleIf(!loading && vm.hasLoadedDuplicates && groups.isEmpty())
             binding.rvGroups.visibleIf(!loading && groups.isNotEmpty())
+            binding.btnDeleteAllDuplicates.visibleIf(!loading && groups.isNotEmpty())
+        }
+
+        vm.scanProgress.observe(viewLifecycleOwner) { p ->
+            binding.progressLoading.setProgress(p.percent, true)
+            binding.tvLoadingPercent.text = "${p.percent}%"
+            binding.tvLoadingCounts.text = if (p.total > 0) {
+                getString(R.string.scan_files_progress_format, p.processed, p.total, p.remaining)
+            } else ""
         }
 
         vm.duplicateGroups.observe(viewLifecycleOwner) { groups ->
             adapter.submitList(groups)
             val wasted = groups.sumOf { it.wastedSize }
-            binding.tvSummary.text =
-                "${groups.size} groups · ${MediaFile.formatSize(wasted)} wasted"
-            val loading = vm.loading.value ?: false
-            binding.layoutEmpty.visibleIf(!loading && groups.isEmpty())
+            binding.tvSummary.text = getString(
+                R.string.groups_wasted_summary,
+                groups.size,
+                MediaFile.formatSize(wasted)
+            )
+            val loading = vm.loading.value == true
+            binding.layoutEmpty.visibleIf(!loading && vm.hasLoadedDuplicates && groups.isEmpty())
             binding.rvGroups.visibleIf(!loading && groups.isNotEmpty())
+            binding.btnDeleteAllDuplicates.visibleIf(!loading && groups.isNotEmpty())
         }
 
         vm.confirmDeleteEvent.observe(viewLifecycleOwner) { files ->
             files ?: return@observe
 
-            val count   = files.size
-            val freed   = MediaFile.formatSize(files.sumOf { it.size })
-            val isSafe  = settingsVm.safeDelete.value == true
+            val count = files.size
+            val freed = MediaFile.formatSize(files.sumOf { it.size })
+            val isSafe = settingsVm.safeDelete.value == true
             val isTrash = isSafe && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
             val message = if (isTrash) {
-                """$count copies ($freed) will be moved to Trash.Recover within 30 days from your gallery Trash. """.trimIndent()
+                getString(R.string.move_to_trash_dialog_message, count, freed)
             } else {
                 getString(R.string.delete_group_copies_message, freed)
             }
 
             MaterialAlertDialogBuilder(requireContext())
-                .setTitle(resources.getQuantityString(
-                    R.plurals.delete_group_copies_title, count, count))
+                .setTitle(
+                    resources.getQuantityString(
+                        R.plurals.delete_group_copies_title, count, count
+                    )
+                )
                 .setMessage(message)
                 .setPositiveButton(R.string.action_delete) { _, _ ->
                     vm.executeDelete(files)
@@ -118,7 +144,7 @@ class DuplicatesFragment : Fragment() {
         vm.deleteResult.observe(viewLifecycleOwner) { result ->
             result ?: return@observe
             result.onSuccess { freed ->
-                showSnack("Freed ${MediaFile.formatSize(freed)}")
+                showSnack(getString(R.string.freed_space_success, MediaFile.formatSize(freed)))
                 vm.clearDeleteResult()
             }.onFailure { e ->
                 if (e is PendingIntentException) {
@@ -138,12 +164,15 @@ class DuplicatesFragment : Fragment() {
     }
 
     private fun confirmDeleteGroup(group: DuplicateGroup) {
-        val toDelete = group.files.drop(1)
-        vm.deleteFiles(toDelete)
+        val toDelete = group.files.filter { it.id != group.keepFileId }
+        if (toDelete.isNotEmpty()) {
+            vm.deleteFiles(toDelete)
+        }
     }
 
-    private fun showSnack(msg: String) =
-        Snackbar.make(binding.root, msg, Snackbar.LENGTH_LONG).show()
+    private fun showSnack(msg: String) {
+        if (_binding != null) Snackbar.make(binding.root, msg, Snackbar.LENGTH_LONG).show()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

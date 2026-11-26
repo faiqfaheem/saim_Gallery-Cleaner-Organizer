@@ -33,15 +33,23 @@ class DuplicateGroupAdapter(
         private var scrollListener: RecyclerView.OnScrollListener? = null
 
         fun bind(group: DuplicateGroup) {
-            b.tvDuplicateCount.text =
-                "${group.files.size} copies · ${MediaFile.formatSize(group.wastedSize)} wasted"
-
-            val innerAdapter = MediaGridAdapter(
-                onItemClick = { file -> onKeepFile(file, group) },
-                onSelectionChanged = {}
+            val ctx = b.root.context
+            b.tvDuplicateCount.text = ctx.getString(
+                R.string.duplicate_group_header,
+                group.files.size,
+                MediaFile.formatSize(group.wastedSize)
             )
 
-            val layoutManager = LinearLayoutManager(b.root.context, LinearLayoutManager.HORIZONTAL, false)
+            val itemWidth = ctx.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._112sdp)
+            val innerAdapter = MediaGridAdapter(
+                onItemClick = { file -> onKeepFile(file, group) },
+                onSelectionChanged = {},
+                keepFileId = group.keepFileId,
+                hideCheckbox = true,
+                fixedItemWidthPx = itemWidth
+            )
+
+            val layoutManager = LinearLayoutManager(ctx, LinearLayoutManager.HORIZONTAL, false)
             b.rvDuplicates.layoutManager = layoutManager
             b.rvDuplicates.setRecycledViewPool(viewPool)
             b.rvDuplicates.adapter = innerAdapter
@@ -68,14 +76,11 @@ class DuplicateGroupAdapter(
 
         private fun setupDots(count: Int) {
             b.layoutDotsContainer.removeAllViews()
-
             if (count <= 1) {
                 b.layoutDotsContainer.visibility = View.GONE
                 return
             }
-
             b.layoutDotsContainer.visibility = View.VISIBLE
-
             val context = b.root.context
             val dotSize = context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._6sdp)
             val dotMargin = context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._3sdp)
@@ -96,8 +101,7 @@ class DuplicateGroupAdapter(
         private fun updateActiveDot(activeIndex: Int) {
             val container = b.layoutDotsContainer
             for (i in 0 until container.childCount) {
-                val dot = container.getChildAt(i)
-                dot.setBackgroundResource(
+                container.getChildAt(i).setBackgroundResource(
                     if (i == activeIndex) R.drawable.bg_dot_active else R.drawable.bg_dot_inactive
                 )
             }

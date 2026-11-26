@@ -3,6 +3,7 @@ package com.smart.gallery.cleaner.organizer.app.utils
 import android.app.Activity
 import android.content.res.Configuration
 import android.graphics.Color
+import android.os.Build
 import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -11,10 +12,15 @@ import androidx.core.view.updatePadding
 
 object InsetsHelper {
 
+    @Suppress("DEPRECATION")
     fun enableEdgeToEdge(activity: Activity) {
         WindowCompat.setDecorFitsSystemWindows(activity.window, false)
         activity.window.statusBarColor = Color.TRANSPARENT
         activity.window.navigationBarColor = Color.TRANSPARENT
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            activity.window.isNavigationBarContrastEnforced = false
+            activity.window.isStatusBarContrastEnforced = false
+        }
         applyAutoBarIcons(activity)
     }
 
@@ -59,7 +65,9 @@ object InsetsHelper {
         val initialBottom = view.paddingBottom
 
         ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val bars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+            )
             v.updatePadding(
                 left = initialLeft + bars.left,
                 top = initialTop + bars.top,
@@ -71,7 +79,7 @@ object InsetsHelper {
         requestInsetsWhenAttached(view)
     }
 
-    private fun requestInsetsWhenAttached(view: View) {
+    fun requestInsetsWhenAttached(view: View) {
         if (view.isAttachedToWindow) {
             view.requestApplyInsets()
         } else {

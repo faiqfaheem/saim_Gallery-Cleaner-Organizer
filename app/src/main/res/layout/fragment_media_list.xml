@@ -175,6 +175,9 @@
             android:id="@+id/layout_loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/background"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical"
             android:visibility="gone">
@@ -212,6 +215,41 @@
                 android:textColor="@color/on_surface_variant"
                 android:textSize="@dimen/_11ssp" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="45%"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progress_loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:max="100"
+                android:progressBackgroundTint="@color/surface_variant"
+                android:progressTint="@color/primary"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_counts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone"
+                tools:text="180 / 400 done · 220 left"
+                tools:visibility="visible" />
+
         </LinearLayout>
 
         <!-- Empty State -->
@@ -219,6 +257,7 @@
             android:id="@+id/layout_empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/background"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="@dimen/_24sdp"
@@ -272,6 +311,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold"
+            android:visibility="gone"
             app:backgroundTint="@color/error"
             app:cornerRadius="@dimen/_21sdp"
             app:icon="@drawable/ic_delete"

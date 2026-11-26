@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <!-- Full-Bleed Custom 3D Studio Illustration Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_175sdp"
+            app:cardBackgroundColor="#131A28"
+            app:cardCornerRadius="@dimen/_22sdp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="0.75dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_slide_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/img_onboarding_ai_clean" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_54sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/gradient_scrim_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_slide_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:background="@drawable/bg_glass_pill"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:textColor="@color/hero_ring"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold"
+                    tools:text="ON-DEVICE AI ENGINE" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Title & Clear Summary -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_slide_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="start"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/on_background"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+            tools:text="AI Smart Clean &amp; Health Score" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_slide_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="start"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/_11ssp"
+            tools:text="On-device AI scans your entire gallery to score storage health and clean junk in one tap." />
+
+        <!-- Detailed 3-Feature Highlights Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_4sdp">
+
+                <!-- Feature Point 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_9sdp">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_ai_pill">
+
+                        <ImageView
+                            android:id="@+id/iv_feat1"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            app:tint="@color/primary"
+                            tools:src="@drawable/ic_similar" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat1_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            tools:text="Duplicates &amp; Similar Best Shot" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat1_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Groups identical &amp; burst photos and auto-keeps the sharpest shot" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:background="@color/divider" />
+
+                <!-- Feature Point 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_9sdp">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_ai_pill">
+
+                        <ImageView
+                            android:id="@+id/iv_feat2"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            app:tint="@color/secondary"
+                            tools:src="@drawable/ic_blur" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat2_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            tools:text="Blurry &amp; Bad Lighting Detector" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat2_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Detects out-of-focus, too dark, and overexposed photos" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:background="@color/divider" />
+
+                <!-- Feature Point 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_9sdp">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_ai_pill">
+
+                        <ImageView
+                            android:id="@+id/iv_feat3"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            app:tint="@color/color_screenshots"
+                            tools:src="@drawable/ic_large_file" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat3_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            tools:text="Large Files, Screenshots &amp; WhatsApp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_feat3_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Find heavy videos, old screenshots, downloads &amp; forwarded media" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

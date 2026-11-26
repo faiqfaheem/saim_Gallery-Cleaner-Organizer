@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">منظف ومنظم المعرض</string>
+
+    <string name="splash_tagline">تنظيف ذكي • تنظيم • تحرير المساحة</string>
+    <string name="splash_privacy_note">ذكاء اصطناعي 100% على الجهاز • بدون جمع بيانات</string>
+
+    <string name="home_title">منظف المعرض الذكي</string>
+    <string name="home_tap_scan">اضغط فحص لتحليل المعرض</string>
+    <string name="home_just_scanned">تم الفحص بالذكاء الاصطناعي للتو</string>
+    <string name="home_scan_failed">فشل الفحص — اضغط للمحاولة مجدداً</string>
+    <string name="action_scan">فحص</string>
+    <string name="action_rescan">إعادة الفحص</string>
+    <string name="internal_storage">التخزين الداخلي</string>
+    <string name="storage_of_format">من %1$s · %2$s متاح</string>
+    <string name="storage_available_format">%1$s متاحة</string>
+    <string name="storage_almost_full_warning">التخزين ممتلئ تقريباً! شغّل التنظيف الذكي لتحرير المساحة.</string>
+    <string name="label_used">مستخدم</string>
+    <string name="label_used_cap">المستخدم</string>
+    <string name="label_free_cap">المتاح</string>
+    <string name="label_total">الإجمالي</string>
+    <string name="label_photos">الصور</string>
+    <string name="label_files">الملفات</string>
+    <string name="action_view_trash">عرض سلة المهملات</string>
+    <string name="section_clean_up">التنظيف الذكي</string>
+    <string name="label_ten_categories">10 فئات</string>
+
+    <string name="ai_badge">AI</string>
+    <string name="ai_smart_clean_title">التنظيف الذكي AI</string>
+    <string name="ai_smart_clean_banner_desc">مؤشر صحة المعرض وتنظيف بنقرة واحدة</string>
+    <string name="ai_on_device_subtitle">تحليل ذكي 100% على الجهاز</string>
+    <string name="ai_analyzing_title">الذكاء الاصطناعي يحلل معرضك…</string>
+    <string name="ai_analyzing_desc">اكتشاف التكرارات، الضبابية، الإضاءة السيئة وأفضل اللقطات</string>
+    <string name="ai_health_score_label">مؤشر صحة المعرض</string>
+    <string name="ai_health_excellent">حالة ممتازة</string>
+    <string name="ai_health_good">حالة جيدة</string>
+    <string name="ai_health_needs_cleanup">يحتاج إلى تنظيف</string>
+    <string name="ai_reclaimable_summary">يمكن تحرير %1$s · %2$d عنصر</string>
+    <string name="ai_recommendations_title">توصيات التنظيف الذكي</string>
+    <string name="ai_rec_old_screenshots">لقطات شاشة قديمة (+30 يوماً)</string>
+    <string name="ai_clean_now">تنظيف ذكي الآن</string>
+    <string name="ai_clean_now_size">تنظيف AI · تحرير %1$s</string>
+    <string name="ai_gallery_optimized_title">معرضك محسّن بالكامل!</string>
+    <string name="ai_gallery_optimized_desc">لم يعثر الذكاء الاصطناعي على صور مكررة أو ضبابية.</string>
+
+    <string name="ai_organizer_title">المنظّم الذكي</string>
+    <string name="ai_organizer_subtitle">تصنيف تلقائي بالذكاء الاصطناعي</string>
+    <string name="ai_organizing_title">الذكاء الاصطناعي ينظم صورك…</string>
+    <string name="ai_organizing_desc">التعرف على الوجوه، المستندات، الطبيعة وأفضل اللقطات</string>
+    <string name="ai_cat_portraits">الأشخاص والبورتريه</string>
+    <string name="ai_cat_documents">المستندات والملاحظات</string>
+    <string name="ai_cat_nature">الطبيعة والمناظر</string>
+    <string name="ai_cat_social">الميمز والتواصل</string>
+    <string name="ai_cat_best_shots">أفضل لقطات AI</string>
+
+    <string name="dark_photos">إضاءة سيئة</string>
+    <string name="large_files">الملفات الكبيرة</string>
+    <string name="duplicates">الصور المكررة</string>
+    <string name="similar_photos">الصور المتشابهة</string>
+    <string name="blurry_photos">الصور الضبابية</string>
+    <string name="screenshots">لقطات الشاشة</string>
+    <string name="videos">الفيديوهات</string>
+    <string name="downloads">التنزيلات</string>
+    <string name="whatsapp_short">واتساب</string>
+    <string name="whatsapp_media">وسائط واتساب</string>
+
+    <string name="card_desc_ai_organizer">ألبومات ذكية بالـ AI</string>
+    <string name="card_desc_dark_photos">مظلمة أو مفرطة الإضاءة</string>
+    <string name="card_desc_large_files">أكبر الصور والفيديوهات</string>
+    <string name="card_desc_duplicates">نسخ متطابقة تستهلك المساحة</string>
+    <string name="card_desc_similar">اختيار أفضل لقطة بالـ AI</string>
+    <string name="card_desc_blurry">صور غير واضحة</string>
+    <string name="card_desc_screenshots">الشاشات الملتقطة</string>
+    <string name="card_desc_videos">جميع ملفات الفيديو</string>
+    <string name="card_desc_downloads">الوسائط المحملة</string>
+    <string name="card_desc_whatsapp">الصور والفيديوهات</string>
+
+    <string name="scan_step_photos">جارٍ تحميل الصور…</string>
+    <string name="scan_step_videos">جارٍ تحميل الفيديوهات…</string>
+    <string name="scan_step_large_files">البحث عن الملفات الكبيرة…</string>
+    <string name="scan_step_screenshots">فحص لقطات الشاشة…</string>
+    <string name="scan_step_downloads">فحص التنزيلات…</string>
+    <string name="scan_step_whatsapp">فحص وسائط واتساب…</string>
+    <string name="scan_step_duplicates">البحث عن الصور المكررة…</string>
+    <string name="scan_step_similar">الذكاء الاصطناعي يطابق الصور المتشابهة…</string>
+    <string name="scan_step_blurry">الذكاء الاصطناعي يفحص الصور الضبابية…</string>
+    <string name="scan_step_dark_photos">الذكاء الاصطناعي يفحص الإضاءة…</string>
+    <string name="scan_step_finalizing">حساب مؤشر صحة المعرض…</string>
+
+    <string name="storage_analysis">تحليل التخزين</string>
+    <string name="storage_reading">جارٍ قراءة التخزين…</string>
+    <string name="storage_overview">نظرة عامة على التخزين</string>
+    <string name="storage_categories">الفئات</string>
+    <string name="storage_system_other">النظام وأخرى</string>
+    <string name="storage_internal_total">داخلي · الإجمالي %1$s</string>
+    <string name="storage_used_format">%1$s مستخدم</string>
+    <string name="storage_free_format">%1$s متاح</string>
+    <string name="storage_used_pct_format">%1$s مستخدم</string>
+
+    <string name="ai_smart_search_title">البحث الذكي AI</string>
+    <string name="search_hint_ai">ابحث بالاسم، الألبوم، blurry، dark، doc…</string>
+    <string name="state_searching">جارٍ البحث…</string>
+    <string name="search_no_results">لا توجد نتائج</string>
+    <string name="search_empty_for_query">لم يتم العثور على ملفات لـ «%1$s»</string>
+    <string name="search_results_for">%1$d نتيجة لـ «%2$s»</string>
+    <string name="filter_images">الصور</string>
+    <string name="filter_gifs">GIF</string>
+    <string name="filter_dark">مظلمة</string>
+
+    <string name="select_all">تحديد الكل</string>
+    <string name="deselect_all">إلغاء التحديد</string>
+    <string name="action_sort">فرز</string>
+    <string name="action_all">الكل</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_delete_all">حذف الكل</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_clear">مسح</string>
+    <string name="action_restore">استعادة</string>
+    <string name="action_continue">متابعة</string>
+    <string name="action_keep_best">إبقاء الأفضل</string>
+    <string name="action_cancelled">تم إلغاء الإجراء</string>
+
+    <string name="badge_blurry">ضبابية</string>
+    <string name="badge_keep">احتفاظ</string>
+    <string name="badge_best_shot">★ الأفضل</string>
+
+    <string name="sort_dialog_title">فرز حسب</string>
+    <string name="sort_newest">الأحدث أولاً</string>
+    <string name="sort_oldest">الأقدم أولاً</string>
+    <string name="sort_largest">الأكبر أولاً</string>
+    <string name="sort_smallest">الأصغر أولاً</string>
+    <string name="sort_name">الاسم أ-ي</string>
+
+    <string name="settings_section_appearance">المظهر</string>
+    <string name="settings_section_safety">الأمان</string>
+    <string name="settings_section_scan">الفحص</string>
+    <string name="settings_section_alerts">التنبيهات</string>
+    <string name="settings_section_info">معلومات</string>
+
+    <string name="settings_theme">السمة</string>
+    <string name="settings_theme_desc">الوضع النهاري أو الليلي أو النظام</string>
+    <string name="theme_system">النظام</string>
+    <string name="theme_follow_system">اتّباع النظام</string>
+    <string name="theme_light">فاتح (نهاري)</string>
+    <string name="theme_dark">داكن (ليلي)</string>
+
+    <string name="settings_language">اللغة</string>
+    <string name="settings_language_desc">اختر لغة عرض التطبيق</string>
+    <string name="lang_system_default">افتراضي النظام</string>
+    <string name="language_screen_title">اختر اللغة</string>
+    <string name="language_screen_subtitle">حدد لغتك المفضلة للتطبيق</string>
+    <string name="language_search_hint">ابحث عن لغة…</string>
+    <string name="action_apply_language">تطبيق اللغة</string>
+
+    <string name="settings_confirm_delete">تأكيد قبل الحذف</string>
+    <string name="settings_confirm_delete_desc">عرض رسالة تأكيد قبل حذف الملفات</string>
+    <string name="settings_safe_delete">الحذف الآمن (السلة)</string>
+    <string name="settings_safe_delete_desc">النقل إلى سلة المهملات بدل الحذف النهائي</string>
+    <string name="safe_delete_requires_android_12">الحذف الآمن يتطلب Android 12 أو أحدث</string>
+    <string name="settings_large_threshold">حد الملفات الكبيرة</string>
+    <string name="settings_large_threshold_desc">تمييز الملفات الأكبر من هذا الحجم</string>
+    <string name="settings_storage_warning">تحذير التخزين</string>
+    <string name="settings_storage_warning_desc">تنبيه عند اقتراب امتلاء المساحة</string>
+    <string name="settings_about">حول التطبيق</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="settings_rate_app">تقييم التطبيق</string>
+    <string name="settings_share_app">مشاركة التطبيق</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_search">البحث</string>
+    <string name="nav_storage">التخزين</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <string name="cd_app_icon">أيقونة التطبيق</string>
+    <string name="cd_file_thumbnail">مصغّرة الملف</string>
+    <string name="cd_navigate_back">رجوع</string>
+
+    <string name="state_loading">جارٍ التحميل…</string>
+    <string name="state_scanning">جارٍ الفحص…</string>
+    <string name="state_scanning_desc">البحث عن الملفات على جهازك</string>
+    <string name="state_empty_title">نظيف تماماً!</string>
+    <string name="state_empty_desc">لا توجد ملفات في هذه الفئة</string>
+    <string name="freed_space_success">تم تحرير %1$s</string>
+    <string name="moved_to_trash_success">نُقل إلى السلة · %1$s قابلة للاستعادة</string>
+    <string name="error_delete_failed">تعذّر حذف بعض الملفات</string>
+    <string name="error_prefix">خطأ: %1$s</string>
+    <string name="items_size_format">%1$d عنصر · %2$s</string>
+    <string name="will_be_freed_format">سيتم تحرير %1$s</string>
+    <string name="selected_of_total_format">تم تحديد %1$d من %2$d</string>
+    <string name="about_version_format">الإصدار %1$s</string>
+
+    <string name="action_delete_all_duplicates">حذف جميع المكررات</string>
+    <string name="action_delete_all_similar">إبقاء الأفضل وحذف الباقي</string>
+    <string name="action_delete_copies">حذف النسخ</string>
+    <string name="duplicates_tip_banner">اضغط على الصورة للاحتفاظ بها، وسيتم حذف الباقي.</string>
+    <string name="similar_tip_banner">اختار الذكاء الاصطناعي ★ أفضل لقطة. اضغط على أي صورة للتبديل.</string>
+    <string name="duplicates_loading_title">البحث عن المكررات…</string>
+    <string name="duplicates_loading_desc">مقارنة الملفات عبر تجزئة MD5 السريعة</string>
+    <string name="similar_loading_title">الذكاء الاصطناعي يبحث عن المتشابهة…</string>
+    <string name="similar_loading_desc">تحليل التشابه البصري واختيار أفضل لقطة</string>
+    <string name="duplicates_empty_title">لا توجد صور مكررة</string>
+    <string name="duplicates_empty_desc">معرضك خالٍ من الصور المكررة تماماً</string>
+    <string name="similar_empty_title">لا توجد صور متشابهة</string>
+    <string name="similar_empty_desc">لا توجد مجموعات صور متشابهة في معرضك</string>
+    <string name="groups_wasted_summary">%1$d مجموعة · %2$s مهدرة</string>
+    <string name="duplicate_group_header">%1$d نسخ · %2$s مهدرة</string>
+    <string name="similar_group_header">%1$d متشابهة · %2$s قابلة للتحرير</string>
+    <string name="delete_group_copies_message">الاحتفاظ بالنسخة المختارة وتحرير %1$s.</string>
+
+    <string name="trash_title">سلة المهملات</string>
+    <string name="trash_empty_action">إفراغ السلة</string>
+    <string name="trash_auto_delete_banner">تُحذف العناصر نهائياً بعد 30 يوماً</string>
+    <string name="trash_empty_title">سلة المهملات فارغة</string>
+    <string name="trash_empty_dialog_title">إفراغ سلة المهملات؟</string>
+    <string name="trash_restore_dialog_title">استعادة %1$d عنصر؟</string>
+    <string name="trash_restore_dialog_msg">ستُعاد الملفات إلى موقعها الأصلي.</string>
+    <string name="delete_dialog_message">سيتم حذف %1$d ملف (%2$s) نهائياً ولا يمكن التراجع.</string>
+    <string name="move_to_trash_dialog_message">سيتم نقل %1$d ملف (%2$s) إلى السلة.\nيمكن استعادتها خلال 30 يوماً.</string>
+
+    <string name="perm_title">إذن الصور والفيديوهات مطلوب</string>
+    <string name="perm_rationale_msg">يحتاج منظف المعرض للوصول إلى الصور والفيديوهات لفحص المكررات والملفات الكبيرة.</string>
+    <string name="perm_denied_title">تم رفض الإذن</string>
+    <string name="perm_denied_msg">يرجى تفعيل إذن الصور والفيديوهات من إعدادات التطبيق للفحص.</string>
+    <string name="perm_grant">منح الإذن</string>
+    <string name="perm_not_now">ليس الآن</string>
+    <string name="perm_open_settings">فتح الإعدادات</string>
+
+    <string name="privacy_last_updated">آخر تحديث: يوليو 2026</string>
+    <string name="privacy_banner_title">خصوصيتك محمية</string>
+    <string name="privacy_banner_desc">تتم جميع عمليات الذكاء الاصطناعي على جهازك.\nلا يتم جمع أو رفع أي بيانات.</string>
+    <string name="privacy_accept_continue">قبول ومتابعة</string>
+    <string name="privacy_decline">رفض</string>
+
+    <string name="label_total_size">الحجم الكلي</string>
+    <string name="label_total_files">عدد الملفات</string>
+
+    <plurals name="selected_files_count">
+        <item quantity="one">ملف واحد محدد</item>
+        <item quantity="other">%d ملفات محددة</item>
+    </plurals>
+    <plurals name="delete_dialog_title">
+        <item quantity="one">حذف %d ملف؟</item>
+        <item quantity="other">حذف %d ملفات؟</item>
+    </plurals>
+    <plurals name="delete_group_copies_title">
+        <item quantity="one">حذف نسخة مكررة واحدة؟</item>
+        <item quantity="other">حذف %d نسخ مكررة؟</item>
+    </plurals>
+    <plurals name="items_count">
+        <item quantity="one">عنصر واحد</item>
+        <item quantity="other">%d عناصر</item>
+    </plurals>
+
+    <!-- Daily Localized Notifications -->
+    <string name="notif_channel_name">تذكيرات منظف المعرض اليومية</string>
+    <string name="notif_channel_desc">تذكيرات يومية لتنظيف الصور المكررة والضبابية وتحرير مساحة التخزين.</string>
+    <string name="notif_daily_title_1">حرر مساحة التخزين بنقرة واحدة</string>
+    <string name="notif_daily_msg_1">شغّل التنظيف الذكي بالذكاء الاصطناعي لاكتشاف الصور المكررة والضبابية ولقطات الشاشة القديمة.</string>
+    <string name="notif_daily_title_2">هل توجد صور مكررة في معرضك؟</string>
+    <string name="notif_daily_msg_2">النسخ المتطابقة تستهلك مساحة كبيرة بصمت. افحص الآن واحتفظ بالصورة الأصلية فقط بأمان.</string>
+    <string name="notif_daily_title_3">احتفظ بأفضل لقطة واضحة فقط</string>
+    <string name="notif_daily_msg_3">دع الذكاء الاصطناعي يختار أوضح صورة من اللقطات المتشابهة ويزيل النسخ الإضافية.</string>
+    <string name="notif_daily_title_4">تخلص من الصور الضبابية وغير الواضحة</string>
+    <string name="notif_daily_msg_4">اكتشف اللقطات المهتزة والضبابية تلقائياً ليبقى معرض صورك نظيفاً ومنظماً.</string>
+    <string name="notif_daily_title_5">تحقق من درجة صحة معرضك</string>
+    <string name="notif_daily_msg_5">شاهد تقييم صحة المعرض اليومي واستعد المساحة المهدرة بتوصيات ذكية ومرتبة.</string>
+    <string name="notif_daily_title_6">هل تتراكم لقطات الشاشة القديمة؟</string>
+    <string name="notif_daily_msg_6">راجع لقطات الشاشة القديمة وامسح غير المهم منها في ثوانٍ لتسريع هاتفك.</string>
+    <string name="notif_daily_title_7">اعثر على الفيديوهات الكبيرة التي تملأ المساحة</string>
+    <string name="notif_daily_msg_7">الفيديوهات والتنزيلات الكبيرة تملأ التخزين بسرعة. راجع أكبر الملفات لتحرير المساحة فوراً.</string>
+    <string name="notif_daily_title_8">نظف وسائط واتساب المعاد توجيهها</string>
+    <string name="notif_daily_msg_8">الصور ومقاطع الفيديو المستلمة عبر واتساب تتراكم بسرعة. أزل غير المرغوب فيه بسهولة.</string>
+    <string name="notif_daily_title_9">صور مظلمة أو ذات إضاءة سيئة في معرضك؟</string>
+    <string name="notif_daily_msg_9">يكتشف الذكاء الاصطناعي الصور المظلمة أو شديدة السطوع تلقائياً لتسهيل تنظيفها.</string>
+    <string name="notif_daily_title_10">استكشف ألبوماتك المنظمة بالذكاء الاصطناعي</string>
+    <string name="notif_daily_msg_10">تصفح البورتريه والمستندات والطبيعة وأفضل اللقطات بخصوصية كاملة على جهازك دون إنترنت.</string>
+</resources>

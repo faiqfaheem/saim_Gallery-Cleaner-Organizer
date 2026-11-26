@@ -1,13 +1,17 @@
 package com.smart.gallery.cleaner.organizer.app.utils
 
 import android.content.Context
+import android.content.res.Configuration
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 fun View.visible() { visibility = View.VISIBLE }
 fun View.gone() { visibility = View.GONE }
@@ -31,7 +35,46 @@ fun View.setScaleAnimation(context: Context, animResId: Int) {
     startAnimation(AnimationUtils.loadAnimation(context, animResId))
 }
 
+/**
+ * Safely navigates using an action ID, preventing IllegalArgumentException crashes
+ * caused by double-taps or navigating after configuration change / back press.
+ */
+fun Fragment.safeNavigate(@IdRes actionId: Int) {
+    if (!isAdded) return
+    runCatching {
+        val navController = findNavController()
+        if (navController.currentDestination?.getAction(actionId) != null) {
+            navController.navigate(actionId)
+        }
+    }
+}
+
+/**
+ * Safely pops back stack without throwing if Fragment is already detached.
+ */
+fun Fragment.safeNavigateUp() {
+    if (!isAdded) return
+    runCatching {
+        findNavController().navigateUp()
+    }
+}
+
+/**
+ * Computes an attractive responsive grid span count for both Portrait and Landscape / Tablets.
+ */
+fun Context.adaptiveSpanCount(portraitSpan: Int, landscapeExtra: Int = 2): Int {
+    val config = resources.configuration
+    val isLandscape = config.orientation == Configuration.ORIENTATION_LANDSCAPE
+    val widthDp = config.screenWidthDp
+    return when {
+        widthDp >= 840 -> portraitSpan + landscapeExtra + 1
+        isLandscape || widthDp >= 600 -> portraitSpan + landscapeExtra
+        else -> portraitSpan
+    }
+}
+
 fun Fragment.showToast(message: String, long: Boolean = false) {
+    if (!isAdded) return
     Toast.makeText(
         requireContext(),
         message,
@@ -44,7 +87,8 @@ fun Fragment.showSnackbar(
     actionLabel: String? = null,
     action: (() -> Unit)? = null
 ) {
-    val snack = Snackbar.make(requireView(), message, Snackbar.LENGTH_LONG)
+    val root = view ?: return
+    val snack = Snackbar.make(root, message, Snackbar.LENGTH_LONG)
     if (actionLabel != null && action != null) {
         snack.setAction(actionLabel) { action() }
     }

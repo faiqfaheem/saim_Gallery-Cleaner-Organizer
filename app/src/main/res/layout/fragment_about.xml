@@ -24,11 +24,11 @@
 
             <ImageView
                 android:id="@+id/btn_back"
-                android:layout_width="@dimen/_44sdp"
-                android:layout_height="@dimen/_44sdp"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@null"
-                android:padding="@dimen/_10sdp"
+                android:contentDescription="@string/cd_navigate_back"
+                android:padding="@dimen/_9sdp"
                 android:src="@drawable/ic_arrow_back"
                 app:tint="@color/on_background" />
 
@@ -37,20 +37,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:layout_weight="1"
-                android:text="About"
+                android:text="@string/settings_about"
                 android:textColor="@color/on_background"
                 android:textSize="@dimen/_17ssp"
                 android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Scrollable body -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_24sdp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -58,90 +57,176 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:paddingStart="@dimen/_16sdp"
-            android:paddingTop="@dimen/_16sdp"
-            android:paddingEnd="@dimen/_16sdp">
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingTop="@dimen/_6sdp">
 
-            <!-- ═══════════════════════════════════════════
-                 BRAND HERO CARD  (gradient primary bg)
-                 ═══════════════════════════════════════════ -->
+            <!-- Darkroom Brand Hero Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_14sdp"
-                app:cardBackgroundColor="@color/primary"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/_22sdp"
+                app:cardElevation="3dp"
                 app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bg_storage_card"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="@dimen/_28sdp">
+                    android:padding="@dimen/_20sdp">
 
-                    <!-- App icon in frosted container -->
+                    <!-- Frosted App Icon -->
                     <com.google.android.material.card.MaterialCardView
-                        android:layout_width="@dimen/_80sdp"
-                        android:layout_height="@dimen/_80sdp"
-                        app:cardBackgroundColor="#22FFFFFF"
-                        app:cardCornerRadius="22dp"
+                        android:layout_width="@dimen/_74sdp"
+                        android:layout_height="@dimen/_74sdp"
+                        app:cardBackgroundColor="#24FFFFFF"
+                        app:cardCornerRadius="@dimen/_20sdp"
                         app:cardElevation="0dp"
-                        app:strokeWidth="0dp">
+                        app:strokeColor="#38FFFFFF"
+                        app:strokeWidth="1dp">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="@dimen/_70sdp"
-                            android:layout_height="@dimen/_70sdp"
+                            android:layout_width="@dimen/_62sdp"
+                            android:layout_height="@dimen/_62sdp"
                             android:layout_gravity="center"
-                            android:contentDescription="@null"
+                            android:contentDescription="@string/cd_app_icon"
                             android:src="@drawable/ic_splash_icon" />
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- App name -->
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tv_app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="center"
                         android:letterSpacing="-0.01"
                         android:textColor="#FFFFFF"
-                        android:textSize="@dimen/_20ssp"
+                        android:textSize="@dimen/_18ssp"
                         android:textStyle="bold"
-                        tools:text="Gallery Cleaner" />
+                        tools:text="Gallery Cleaner &amp; Organizer" />
 
-                    <!-- Tagline -->
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4sdp"
-                        android:letterSpacing="0.04"
-                        android:text="Clean · Organize · Free Space"
-                        android:textColor="#AAFFFFFF"
-                        android:textSize="@dimen/_12ssp" />
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:text="@string/splash_tagline"
+                        android:textColor="#B8FFFFFF"
+                        android:textSize="@dimen/_11ssp" />
 
-                    <!-- Version pill -->
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tv_version"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_14sdp"
-                        android:background="@drawable/bg_reclaimable_pill"
-                        android:paddingStart="@dimen/_14sdp"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_14sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        android:background="@drawable/bg_hero_stat_pill"
+                        android:paddingHorizontal="@dimen/_13sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:textColor="@color/hero_ring"
+                        android:textSize="@dimen/_11ssp"
                         android:textStyle="bold"
-                        tools:text="Version 1.0.0" />
+                        tools:text="Version 1.0" />
 
+                    <!-- 3 Trust Highlight Pills -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_hero_stat_pill"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_9sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_privacy_policy"
+                                app:tint="@color/hero_ring" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="100% Private"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_9ssp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_hero_stat_pill"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_9sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_ai_sparkle"
+                                app:tint="@color/hero_ring" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="On-Device AI"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_9ssp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_hero_stat_pill"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_9sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_language"
+                                app:tint="@color/hero_ring" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="20 Languages"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_9ssp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ═══════════════════════════════════════════
-                 PRIVACY BADGE — full width
-                 ═══════════════════════════════════════════ -->
+            <!-- Privacy First Card -->
             <com.google.android.material.card.MaterialCardView
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
@@ -154,23 +239,23 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="@dimen/_16sdp">
+                    android:padding="@dimen/_14sdp">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:layout_width="@dimen/_44sdp"
-                        android:layout_height="@dimen/_44sdp"
-                        android:layout_marginEnd="@dimen/_14sdp"
-                        app:cardBackgroundColor="#3310B981"
-                        app:cardCornerRadius="12dp"
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        app:cardBackgroundColor="#2E10B981"
+                        app:cardCornerRadius="@dimen/_12sdp"
                         app:cardElevation="0dp"
                         app:strokeWidth="0dp">
 
                         <ImageView
-                            android:layout_width="@dimen/_24sdp"
-                            android:layout_height="@dimen/_24sdp"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
                             android:contentDescription="@null"
-                            android:src="@drawable/ic_shield"
+                            android:src="@drawable/ic_privacy_policy"
                             app:tint="@color/success" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -183,34 +268,32 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="100% Private"
+                            android:text="@string/privacy_banner_title"
                             android:textColor="@color/success"
-                            android:textSize="@dimen/_14ssp"
+                            android:textSize="@dimen/_13ssp"
                             android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_2sdp"
-                            android:alpha="0.8"
-                            android:lineSpacingMultiplier="1.4"
-                            android:text="No data collected. All processing happens entirely on your device."
-                            android:textColor="@color/success"
-                            android:textSize="@dimen/_11ssp" />
+                            android:lineSpacingMultiplier="1.3"
+                            android:text="@string/privacy_banner_desc"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="@dimen/_10ssp" />
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ═══════════════════════════════════════════
-                 FEATURE HIGHLIGHTS
-                 ═══════════════════════════════════════════ -->
+            <!-- Feature Highlights -->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:text="What it does"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="@string/section_clean_up"
                 android:textColor="@color/on_background"
-                android:textSize="@dimen/_15ssp"
+                android:textSize="@dimen/_14ssp"
                 android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
@@ -223,35 +306,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="@dimen/_8sdp"
-                    android:paddingBottom="@dimen/_8sdp">
+                    android:paddingVertical="@dimen/_4sdp">
 
-                    <!-- Large files -->
+                    <!-- AI Smart Clean -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
 
-                        <com.google.android.material.card.MaterialCardView
+                        <FrameLayout
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_ai_pill">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_large_file"
-                                app:tint="@color/color_large_files" />
-                        </com.google.android.material.card.MaterialCardView>
+                                android:src="@drawable/ic_ai_sparkle"
+                                app:tint="@color/ai_accent" />
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -262,53 +341,45 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Large Files"
+                                android:text="@string/ai_smart_clean_title"
                                 android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
+                                android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Find &amp; remove files eating your space"
+                                android:text="@string/ai_smart_clean_banner_desc"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
 
-                    <!-- Duplicates -->
+                    <!-- AI Organizer -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
 
-                        <com.google.android.material.card.MaterialCardView
+                        <FrameLayout
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_duplicate"
-                                app:tint="@color/color_duplicates" />
-                        </com.google.android.material.card.MaterialCardView>
+                                android:src="@drawable/ic_ai_category"
+                                app:tint="@color/color_ai_organizer" />
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -319,53 +390,94 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Duplicate Photos"
+                                android:text="@string/ai_organizer_title"
                                 android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
+                                android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Detect &amp; remove exact duplicate images"
+                                android:text="@string/ai_organizer_subtitle"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
 
-                    <!-- Blurry -->
+                    <!-- Duplicates & Similar -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
 
-                        <com.google.android.material.card.MaterialCardView
+                        <FrameLayout
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_similar"
+                                app:tint="@color/color_similar" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/similar_photos"
+                                android:textColor="@color/on_surface"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/card_desc_similar"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
+
+                    <!-- Blurry & Dark -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
                                 android:src="@drawable/ic_blur"
                                 app:tint="@color/color_blurry" />
-                        </com.google.android.material.card.MaterialCardView>
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -376,53 +488,45 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Blurry Photos"
+                                android:text="@string/blurry_photos"
                                 android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
+                                android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Identify &amp; clean low-quality images"
+                                android:text="@string/card_desc_blurry"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
 
-                    <!-- Screenshots -->
+                    <!-- Large Files & Media -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
 
-                        <com.google.android.material.card.MaterialCardView
+                        <FrameLayout
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_screenshot"
-                                app:tint="@color/color_screenshots" />
-                        </com.google.android.material.card.MaterialCardView>
+                                android:src="@drawable/ic_large_file"
+                                app:tint="@color/color_large_files" />
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -433,53 +537,45 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Screenshots"
+                                android:text="@string/large_files"
                                 android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
+                                android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Clear out old captured screens"
+                                android:text="@string/card_desc_large_files"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
 
-                    <!-- WhatsApp -->
+                    <!-- Safe Trash -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_10sdp">
 
-                        <com.google.android.material.card.MaterialCardView
+                        <FrameLayout
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_whatsapp"
-                                app:tint="@color/color_whatsapp" />
-                        </com.google.android.material.card.MaterialCardView>
+                                android:src="@drawable/ic_restore_trash"
+                                app:tint="@color/success" />
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -490,83 +586,23 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="WhatsApp Media"
+                                android:text="@string/settings_safe_delete"
                                 android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
+                                android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Reclaim space from forwarded media"
+                                android:text="@string/trash_auto_delete_banner"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
                     </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
-
-                    <!-- Downloads -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="@dimen/_36sdp"
-                            android:layout_height="@dimen/_36sdp"
-                            android:layout_marginEnd="@dimen/_14sdp"
-                            app:cardBackgroundColor="@color/surface_variant"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp"
-                            app:strokeWidth="0dp">
-
-                            <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
-                                android:layout_gravity="center"
-                                android:contentDescription="@null"
-                                android:src="@drawable/ic_download"
-                                app:tint="@color/color_downloads" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Downloads"
-                                android:textColor="@color/on_surface"
-                                android:textSize="@dimen/_13ssp"
-                                android:textStyle="bold" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Remove downloaded images &amp; videos"
-                                android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ═══════════════════════════════════════════
-                 APP INFO ROW (version + build)
-                 ═══════════════════════════════════════════ -->
+            <!-- Clean App Details Card (No duplicate Settings actions) -->
             <com.google.android.material.card.MaterialCardView
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
@@ -576,90 +612,150 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingTop="@dimen/_8sdp"
-                    android:paddingBottom="@dimen/_8sdp">
+                    android:orientation="vertical">
 
-                    <!-- Version row -->
+                    <!-- Version Row -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_52sdp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/primary" />
+                        </FrameLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Version:"
+                            android:text="Version"
                             android:textColor="@color/on_surface"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tv_version_row"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/on_surface_variant"
-                            android:textSize="@dimen/_13ssp"
-                            tools:text="1.0.0" />
+                            android:background="@drawable/bg_count_pill"
+                            android:paddingHorizontal="@dimen/_9sdp"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            tools:text="v1.0" />
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
 
-                    <!-- Package row -->
+                    <!-- Engine Row -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_52sdp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp">
+                        android:paddingHorizontal="@dimen/_14sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_ai_sparkle"
+                                app:tint="@color/ai_accent" />
+                        </FrameLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.30"
-                            android:text="Package:"
+                            android:layout_weight="1"
+                            android:text="AI Engine"
                             android:textColor="@color/on_surface"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/tv_package"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.70"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:ellipsize="start"
-                            android:maxLines="2"
+                            android:text="On-Device"
                             android:textColor="@color/on_surface_variant"
                             android:textSize="@dimen/_11ssp"
-                            tools:text="com.smart.gallery" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
-                    <View
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="@dimen/_14sdp" android:background="@color/divider" />
+
+                    <!-- Data Storage Row -->
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_16sdp"
-                        android:paddingEnd="@dimen/_16sdp" />
+                        android:layout_height="@dimen/_52sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_14sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_privacy_policy"
+                                app:tint="@color/success" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Data &amp; Privacy"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100% Offline"
+                            android:textColor="@color/success"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginBottom="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
                 android:gravity="center"
-                android:text="Made with ❤ by Gallery Cleaner &amp; Organizer Team"
+                android:text="© 2026 Gallery Cleaner &amp; Organizer"
                 android:textColor="@color/on_surface_variant"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

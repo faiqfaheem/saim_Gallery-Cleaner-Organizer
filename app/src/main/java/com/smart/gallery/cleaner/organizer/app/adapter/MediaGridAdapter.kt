@@ -21,7 +21,11 @@ import com.smart.gallery.cleaner.organizer.app.utils.visible
 class MediaGridAdapter(
     private val onItemClick: (MediaFile) -> Unit,
     private val onSelectionChanged: (MediaFile) -> Unit,
-    private val onLongClick: (MediaFile) -> Unit = {}
+    private val onLongClick: (MediaFile) -> Unit = {},
+    private val keepFileId: Long? = null,
+    private val bestShotId: Long? = null,
+    private val hideCheckbox: Boolean = false,
+    private val fixedItemWidthPx: Int? = null
 ) : ListAdapter<MediaFile, MediaGridAdapter.MediaViewHolder>(DIFF) {
 
     companion object {
@@ -29,16 +33,17 @@ class MediaGridAdapter(
             override fun areItemsTheSame(a: MediaFile, b: MediaFile) = a.id == b.id
             override fun areContentsTheSame(a: MediaFile, b: MediaFile) =
                 a.isSelected == b.isSelected &&
-                        a.isBlurry   == b.isBlurry   &&
-                        a.size       == b.size        &&
-                        a.duration   == b.duration
+                        a.isBlurry == b.isBlurry &&
+                        a.isBestShot == b.isBestShot &&
+                        a.size == b.size &&
+                        a.duration == b.duration
         }
 
         fun openInDefaultViewer(context: Context, file: MediaFile) {
             val mimeType = when {
                 file.isVideo -> "video/*"
-                file.isGif   -> "image/gif"
-                else         -> "image/*"
+                file.isGif -> "image/gif"
+                else -> "image/*"
             }
             try {
                 context.startActivity(
@@ -57,7 +62,8 @@ class MediaGridAdapter(
                             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                         }
                     )
-                } catch (_: Exception) { /* no compatible app installed */ }
+                } catch (_: Exception) {
+                }
             }
         }
     }
@@ -66,6 +72,14 @@ class MediaGridAdapter(
         RecyclerView.ViewHolder(b.root) {
 
         fun bind(file: MediaFile) {
+            fixedItemWidthPx?.let { w ->
+                val lp = b.root.layoutParams
+                if (lp != null && lp.width != w) {
+                    lp.width = w
+                    b.root.layoutParams = lp
+                }
+            }
+
             b.ivThumbnail.load(file.uri) {
                 crossfade(150)
                 placeholder(R.drawable.ic_image_placeholder)
@@ -92,21 +106,50 @@ class MediaGridAdapter(
                 b.tvDuration.gone()
             }
 
-            if (file.isBlurry) b.chipBlurry.visible() else b.chipBlurry.gone()
+            val isKeeper = keepFileId != null && file.id == keepFileId
+            val isBest = (bestShotId != null && file.id == bestShotId) || file.isBestShot
 
-            val selected = file.isSelected
-            b.cbSelect.isChecked          = selected
-            b.selectionOverlay.visibility = if (selected) View.VISIBLE else View.GONE
-            b.viewSelectedRing.visibility = if (selected) View.VISIBLE else View.GONE
+            if (isKeeper || (bestShotId != null && isBest)) {
+                b.chipKeep.visible()
+                b.chipKeep.text = if (isBest && bestShotId != null) {
+                    b.root.context.getString(R.string.badge_best_shot)
+                } else {
+                    b.root.context.getString(R.string.badge_keep)
+                }
+                b.chipBlurry.gone()
+            } else {
+                b.chipKeep.gone()
+                if (file.isBlurry) b.chipBlurry.visible() else b.chipBlurry.gone()
+            }
+
+            if (hideCheckbox) {
+                b.flCheckbox.gone()
+            } else {
+                b.flCheckbox.visible()
+            }
+
+            val highlighted = file.isSelected || isKeeper
+            b.cbSelect.isChecked = file.isSelected
+            b.selectionOverlay.visibility = if (file.isSelected) View.VISIBLE else View.GONE
+            b.viewSelectedRing.visibility = if (highlighted) View.VISIBLE else View.GONE
 
             b.root.setOnClickListener {
-                if (selected || currentList.any { it.isSelected }) {
+                if (hideCheckbox) {
+                    onItemClick(file)
+                } else if (file.isSelected || currentList.any { it.isSelected }) {
                     onItemClick(file)
                 } else {
                     openInDefaultViewer(b.root.context, file)
                 }
             }
-            b.root.setOnLongClickListener { onLongClick(file); true }
+            b.root.setOnLongClickListener {
+                if (hideCheckbox) {
+                    openInDefaultViewer(b.root.context, file)
+                } else {
+                    onLongClick(file)
+                }
+                true
+            }
             b.cbSelect.setOnClickListener { onSelectionChanged(file) }
         }
     }

@@ -49,7 +49,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:contentDescription="@null"
-                        android:src="@drawable/ic_shield"
+                        android:src="@drawable/ic_privacy_policy"
                         app:tint="@color/success" />
 
                     <TextView
@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:gravity="center"
-                        android:text="Your privacy is protected"
+                        android:text="@string/privacy_banner_title"
                         android:textColor="@color/success"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -69,7 +69,7 @@
                         android:alpha="0.8"
                         android:gravity="center"
                         android:lineSpacingMultiplier="1.4"
-                        android:text="All processing happens on your device.\nNo data is ever collected or uploaded."
+                        android:text="@string/privacy_banner_desc"
                         android:textColor="@color/success"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -105,7 +105,7 @@
             android:id="@+id/btnAcceptContinue"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Accept &amp; Continue"
+            android:text="@string/privacy_accept_continue"
             android:textSize="15sp"
             android:textStyle="bold"
             app:cornerRadius="12dp" />
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="4dp"
-            android:text="Decline"
+            android:text="@string/privacy_decline"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

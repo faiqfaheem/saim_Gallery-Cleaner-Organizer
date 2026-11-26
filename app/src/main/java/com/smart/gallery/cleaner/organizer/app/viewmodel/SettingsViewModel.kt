@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.smart.gallery.cleaner.organizer.app.data.repository.SettingsRepository
+import com.smart.gallery.cleaner.organizer.app.utils.LocaleHelper
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
@@ -13,6 +14,7 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     private val repo = SettingsRepository(application)
 
     val themeMode = repo.themeMode.asLiveData()
+    val appLanguage = repo.appLanguage.asLiveData()
     val confirmDelete = repo.confirmDelete.asLiveData()
     val safeDelete = repo.safeDelete.asLiveData()
     val largeFileThreshold = repo.largeFileThreshold.asLiveData()
@@ -30,6 +32,13 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
                 else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
             }
             AppCompatDelegate.setDefaultNightMode(nightMode)
+        }
+    }
+
+    fun setAppLanguage(languageTag: String) {
+        viewModelScope.launch {
+            repo.setAppLanguage(languageTag)
+            LocaleHelper.applyLanguage(languageTag)
         }
     }
 

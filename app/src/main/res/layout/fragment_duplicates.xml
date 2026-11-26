@@ -76,6 +76,7 @@
                 app:tint="@color/primary" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tip_banner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/duplicates_tip_banner"
@@ -90,7 +91,6 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- Duplicate Groups List -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_groups"
             android:layout_width="match_parent"
@@ -100,11 +100,13 @@
             android:paddingBottom="@dimen/_80sdp"
             tools:listitem="@layout/item_duplicate_group" />
 
-        <!-- Loading State View -->
         <LinearLayout
             android:id="@+id/layout_loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/background"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical"
             android:visibility="gone">
@@ -126,6 +128,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
@@ -135,19 +138,49 @@
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:text="@string/duplicates_loading_desc"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="@dimen/_11ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                tools:text="64%" />
+
+            <ProgressBar
+                android:id="@+id/progress_loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:max="100"
+                android:progressBackgroundTint="@color/surface_variant"
+                android:progressTint="@color/primary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loading_counts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/_11ssp"
+                tools:text="160 / 250 done · 90 left" />
         </LinearLayout>
 
-        <!-- Empty State View -->
         <LinearLayout
             android:id="@+id/layout_empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/background"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="@dimen/_24sdp"
@@ -171,6 +204,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_empty_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_16sdp"
@@ -180,6 +214,7 @@
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_empty_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_6sdp"
@@ -191,14 +226,13 @@
         </LinearLayout>
     </FrameLayout>
 
-    <!-- Delete All Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_delete_all_duplicates"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_42sdp"
+        android:layout_height="@dimen/_44sdp"
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
         android:text="@string/action_delete_all_duplicates"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
@@ -206,7 +240,7 @@
         android:textStyle="bold"
         android:visibility="gone"
         app:backgroundTint="@color/error"
-        app:cornerRadius="@dimen/_21sdp"
+        app:cornerRadius="@dimen/_22sdp"
         app:icon="@drawable/ic_delete"
         app:iconGravity="textStart"
         app:iconPadding="@dimen/_6sdp"

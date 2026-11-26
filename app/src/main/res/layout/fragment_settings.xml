@@ -18,44 +18,25 @@
             android:layout_height="?attr/actionBarSize"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="@dimen/_4sdp"
+            android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp">
 
-            <ImageView
-                android:layout_width="@dimen/_44sdp"
-                android:layout_height="@dimen/_44sdp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@null"
-                android:padding="@dimen/_10sdp"
-                android:src="@drawable/ic_arrow_back"
-                android:visibility="gone"
-                app:tint="@color/on_background" />
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="@dimen/_8sdp">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Settings"
-                    android:textColor="@color/on_background"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                android:text="@string/nav_settings"
+                android:textColor="@color/on_background"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Scrollable body -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/_32sdp"
+        android:paddingBottom="@dimen/_28sdp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -63,16 +44,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="@dimen/_16sdp"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
             android:paddingEnd="@dimen/_16sdp">
 
+            <!-- APPEARANCE -->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:letterSpacing="0.12"
-                android:text="APPEARANCE"
+                android:text="@string/settings_section_appearance"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
@@ -81,101 +63,19 @@
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_20sdp">
-
-                <!-- Theme -->
-                <LinearLayout
-                    android:id="@+id/row_theme"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_64sdp"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="@dimen/_14sdp"
-                    android:paddingEnd="@dimen/_14sdp">
-
-                    <!-- Icon -->
-                    <FrameLayout
-                        android:layout_width="@dimen/_38sdp"
-                        android:layout_height="@dimen/_38sdp"
-                        android:layout_marginEnd="@dimen/_14sdp"
-                        android:background="@drawable/bg_setting_icon">
-
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp"
-                            android:layout_gravity="center"
-                            android:contentDescription="@null"
-                            android:src="@drawable/ic_theme"
-                            app:tint="@color/primary" />
-                    </FrameLayout>
-
-                    <!-- Text -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Theme"
-                            android:textColor="@color/on_surface"
-                            android:textSize="@dimen/_12ssp"
-                            android:textStyle="bold" />
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Choose app appearance"
-                            android:textColor="@color/on_surface_variant"
-                            android:textSize="@dimen/_11ssp" />
-                    </LinearLayout>
-
-                    <!-- Current value -->
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tv_theme_value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_4sdp"
-                        android:textColor="@color/primary"
-                        android:textSize="@dimen/_12ssp" />
-
-                    <ImageView
-                        android:layout_width="@dimen/_16sdp"
-                        android:layout_height="@dimen/_16sdp"
-                        android:contentDescription="@null"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/on_surface_variant" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:letterSpacing="0.12"
-                android:text="SAFETY"
-                android:textColor="@color/primary"
-                android:textSize="@dimen/_10ssp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                style="@style/CardStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_20sdp">
+                android:layout_marginBottom="@dimen/_18sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Confirm before delete -->
+                    <!-- Theme Row -->
                     <LinearLayout
+                        android:id="@+id/row_theme"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_64sdp"
+                        android:layout_height="@dimen/_62sdp"
+                        android:background="?attr/selectableItemBackground"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingStart="@dimen/_14sdp"
@@ -192,7 +92,163 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_shield"
+                                android:src="@drawable/ic_theme"
+                                app:tint="@color/primary" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_theme"
+                                android:textColor="@color/on_surface"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_theme_desc"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_theme_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/on_surface_variant" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                    <!-- Language Row -->
+                    <LinearLayout
+                        android:id="@+id/row_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_62sdp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_14sdp"
+                        android:paddingEnd="@dimen/_14sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_language"
+                                app:tint="@color/secondary" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_language"
+                                android:textColor="@color/on_surface"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_language_desc"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_language_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/on_surface_variant" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- SAFETY -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:letterSpacing="0.12"
+                android:text="@string/settings_section_safety"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_18sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_62sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_14sdp"
+                        android:paddingEnd="@dimen/_14sdp">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:background="@drawable/bg_setting_icon">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_confirm_delete"
                                 app:tint="@color/color_large_files" />
                         </FrameLayout>
 
@@ -205,7 +261,7 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Confirm before delete"
+                                android:text="@string/settings_confirm_delete"
                                 android:textColor="@color/on_surface"
                                 android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
@@ -213,9 +269,9 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Show a dialog before deleting files"
+                                android:text="@string/settings_confirm_delete_desc"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
                         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -224,18 +280,14 @@
                             android:layout_height="wrap_content" />
                     </LinearLayout>
 
-                    <!-- Divider -->
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_14sdp" />
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
 
-                    <!-- Safe delete (Trash) — Android 12+ badge -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_64sdp"
+                        android:layout_height="@dimen/_62sdp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingStart="@dimen/_14sdp"
@@ -252,7 +304,7 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_delete"
+                                android:src="@drawable/ic_restore_trash"
                                 app:tint="@color/success" />
                         </FrameLayout>
 
@@ -262,28 +314,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="@dimen/_6sdp"
-                                    android:text="Safe delete (Trash)"
-                                    android:textColor="@color/on_surface"
-                                    android:textSize="@dimen/_12ssp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
+                                android:text="@string/settings_safe_delete"
+                                android:textColor="@color/on_surface"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Move to Trash instead of permanent delete"
+                                android:text="@string/settings_safe_delete_desc"
                                 android:textColor="@color/on_surface_variant"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
                         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -295,12 +339,13 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- SCAN -->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:letterSpacing="0.12"
-                android:text="SCAN"
+                android:text="@string/settings_section_scan"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
@@ -309,13 +354,12 @@
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_20sdp">
+                android:layout_marginBottom="@dimen/_18sdp">
 
-                <!-- Large file threshold -->
                 <LinearLayout
                     android:id="@+id/row_large_file_threshold"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_64sdp"
+                    android:layout_height="@dimen/_62sdp"
                     android:background="?attr/selectableItemBackground"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -333,7 +377,7 @@
                             android:layout_height="@dimen/_20sdp"
                             android:layout_gravity="center"
                             android:contentDescription="@null"
-                            android:src="@drawable/ic_large_file"
+                            android:src="@drawable/ic_tune_size"
                             app:tint="@color/color_large_files" />
                     </FrameLayout>
 
@@ -346,7 +390,7 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Large file threshold"
+                            android:text="@string/settings_large_threshold"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
@@ -354,9 +398,9 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Files bigger than this are flagged"
+                            android:text="@string/settings_large_threshold_desc"
                             android:textColor="@color/on_surface_variant"
-                            android:textSize="@dimen/_11ssp" />
+                            android:textSize="@dimen/_10ssp" />
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -365,7 +409,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_4sdp"
                         android:textColor="@color/primary"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="@dimen/_16sdp"
@@ -376,12 +421,13 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- NOTIFICATIONS -->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:letterSpacing="0.12"
-                android:text="NOTIFICATIONS"
+                android:text="@string/settings_section_alerts"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
@@ -390,11 +436,11 @@
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_20sdp">
+                android:layout_marginBottom="@dimen/_18sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_64sdp"
+                    android:layout_height="@dimen/_62sdp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="@dimen/_14sdp"
@@ -411,8 +457,8 @@
                             android:layout_height="@dimen/_20sdp"
                             android:layout_gravity="center"
                             android:contentDescription="@null"
-                            android:src="@drawable/ic_storage"
-                            app:tint="@color/color_downloads" />
+                            android:src="@drawable/ic_notification_alert"
+                            app:tint="@color/warning" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -424,7 +470,7 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Storage warning"
+                            android:text="@string/settings_storage_warning"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
@@ -432,9 +478,9 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Alert when storage is almost full"
+                            android:text="@string/settings_storage_warning_desc"
                             android:textColor="@color/on_surface_variant"
-                            android:textSize="@dimen/_11ssp" />
+                            android:textSize="@dimen/_10ssp" />
                     </LinearLayout>
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
@@ -444,12 +490,13 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- INFO -->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:letterSpacing="0.12"
-                android:text="INFO"
+                android:text="@string/settings_section_info"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
@@ -464,11 +511,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- About -->
                     <LinearLayout
                         android:id="@+id/row_about"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_58sdp"
                         android:background="?attr/selectableItemBackground"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
@@ -482,18 +528,19 @@
                             android:background="@drawable/bg_setting_icon">
 
                             <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/_30sdp"
-                                android:layout_height="@dimen/_30sdp"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_splash_icon" />
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/primary" />
                         </FrameLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="About"
+                            android:text="@string/settings_about"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
@@ -508,16 +555,13 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_14sdp" />
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
 
-                    <!-- Privacy -->
                     <LinearLayout
                         android:id="@+id/row_privacy"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_58sdp"
                         android:background="?attr/selectableItemBackground"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
@@ -535,7 +579,7 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_shield"
+                                android:src="@drawable/ic_privacy_policy"
                                 app:tint="@color/success" />
                         </FrameLayout>
 
@@ -543,7 +587,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Privacy policy"
+                            android:text="@string/privacy_policy"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
@@ -558,16 +602,13 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_14sdp" />
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
 
-                    <!-- Rate app -->
                     <LinearLayout
                         android:id="@+id/row_rate_app"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_58sdp"
                         android:background="?attr/selectableItemBackground"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
@@ -585,15 +626,15 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_check_circle"
-                                app:tint="@color/color_whatsapp" />
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/color_blurry" />
                         </FrameLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Rate this app"
+                            android:text="@string/settings_rate_app"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
@@ -608,16 +649,13 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/divider"
-                        android:paddingStart="@dimen/_66sdp"
-                        android:paddingEnd="@dimen/_14sdp" />
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
 
-                    <!-- Share app -->
                     <LinearLayout
                         android:id="@+id/row_share_app"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_58sdp"
                         android:background="?attr/selectableItemBackground"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
@@ -635,7 +673,7 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
-                                android:src="@drawable/ic_arrow_right"
+                                android:src="@drawable/ic_share"
                                 app:tint="@color/color_screenshots" />
                         </FrameLayout>
 
@@ -643,7 +681,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Share app"
+                            android:text="@string/settings_share_app"
                             android:textColor="@color/on_surface"
                             android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />

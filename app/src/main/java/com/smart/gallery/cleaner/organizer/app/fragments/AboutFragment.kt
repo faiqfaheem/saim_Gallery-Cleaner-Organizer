@@ -1,12 +1,14 @@
 package com.smart.gallery.cleaner.organizer.app.fragments
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.smart.gallery.cleaner.organizer.app.BuildConfig
+import com.smart.gallery.cleaner.organizer.app.R
 import com.smart.gallery.cleaner.organizer.app.databinding.FragmentAboutBinding
-import com.smart.gallery.cleaner.organizer.app.utils.InsetsHelper
+import com.smart.gallery.cleaner.organizer.app.utils.safeNavigateUp
 
 class AboutFragment : Fragment() {
 
@@ -20,14 +22,15 @@ class AboutFragment : Fragment() {
 
     override fun onViewCreated(view: View, s: Bundle?) {
         super.onViewCreated(view, s)
-        b.btnBack.setOnClickListener { findNavController().navigateUp() }
+        b.btnBack.setOnClickListener { safeNavigateUp() }
 
-        b.tvAppName.text = "Gallery Cleaner & Organizer"
-        b.tvVersion.text = "Version ${BuildConfig.VERSION_NAME}"
-
-        b.tvVersionRow.text = BuildConfig.VERSION_NAME
-        b.tvPackage.text    = requireContext().packageName
+        b.tvAppName.text = getString(R.string.app_name)
+        b.tvVersion.text = getString(R.string.about_version_format, BuildConfig.VERSION_NAME)
+        b.tvVersionRow.text = "v${BuildConfig.VERSION_NAME}"
     }
 
-    override fun onDestroyView() { super.onDestroyView(); _b = null }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _b = null
+    }
 }

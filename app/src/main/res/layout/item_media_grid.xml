@@ -21,24 +21,24 @@
             android:id="@+id/iv_thumbnail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_120sdp"
+            android:background="@color/surface_variant"
             android:contentDescription="@string/cd_file_thumbnail"
             android:scaleType="centerCrop"
-            android:background="@color/surface_variant"
-            tools:src="@drawable/ic_image_placeholder"/>
+            tools:src="@drawable/ic_image_placeholder" />
 
         <!-- Top Scrim -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_48sdp"
+            android:layout_height="@dimen/_44sdp"
             android:layout_gravity="top"
-            android:background="@drawable/gradient_scrim_top"/>
+            android:background="@drawable/gradient_scrim_top" />
 
         <!-- Bottom Scrim -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_48sdp"
+            android:layout_height="@dimen/_44sdp"
             android:layout_gravity="bottom"
-            android:background="@drawable/gradient_scrim_bottom"/>
+            android:background="@drawable/gradient_scrim_bottom" />
 
         <!-- Blurry Badge -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -49,14 +49,32 @@
             android:layout_margin="@dimen/_5sdp"
             android:background="@drawable/bg_blurry_badge"
             android:paddingStart="@dimen/_6sdp"
-            android:paddingEnd="@dimen/_6sdp"
             android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_6sdp"
             android:paddingBottom="@dimen/_2sdp"
-            android:text="Blurry"
+            android:text="@string/badge_blurry"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_8ssp"
             android:textStyle="bold"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
+        <!-- AI Best Shot / Keep Badge -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/chip_keep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/bg_best_shot_badge"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@string/badge_keep"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <!-- Video Play Center Icon -->
         <androidx.appcompat.widget.AppCompatImageView
@@ -64,8 +82,8 @@
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_video"
             android:contentDescription="@null"
+            android:src="@drawable/ic_video"
             android:visibility="gone"
             app:tint="#CCFFFFFF" />
 
@@ -78,15 +96,15 @@
             android:layout_margin="@dimen/_5sdp"
             android:background="@drawable/bg_badge"
             android:paddingStart="@dimen/_5sdp"
-            android:paddingEnd="@dimen/_5sdp"
             android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_5sdp"
             android:paddingBottom="@dimen/_2sdp"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/_9ssp"
             android:textStyle="bold"
             android:visibility="gone"
             tools:text="1:24"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
         <!-- File Size -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -97,12 +115,12 @@
             android:layout_margin="@dimen/_5sdp"
             android:background="@drawable/bg_badge"
             android:paddingStart="@dimen/_5sdp"
-            android:paddingEnd="@dimen/_5sdp"
             android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_5sdp"
             android:paddingBottom="@dimen/_2sdp"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/_9ssp"
-            tools:text="4.2 MB"/>
+            tools:text="4.2 MB" />
 
         <!-- Selection Tint Overlay -->
         <View
@@ -110,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/selection_overlay"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <!-- Selected Card Border Ring -->
         <View
@@ -118,10 +136,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_selected_card"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <!-- Checkbox Container -->
         <FrameLayout
+            android:id="@+id/fl_checkbox"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="top|end"
@@ -136,7 +155,7 @@
                 android:layout_gravity="center"
                 android:background="@null"
                 app:buttonTint="@color/primary"
-                app:useMaterialThemeColors="false"/>
+                app:useMaterialThemeColors="false" />
 
         </FrameLayout>
     </FrameLayout>

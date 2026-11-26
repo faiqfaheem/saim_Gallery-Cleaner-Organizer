@@ -6,14 +6,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.smart.gallery.cleaner.organizer.app.R
 import com.smart.gallery.cleaner.organizer.app.databinding.FragmentSettingsBinding
+import com.smart.gallery.cleaner.organizer.app.utils.LocaleHelper
+import com.smart.gallery.cleaner.organizer.app.utils.safeNavigate
 import com.smart.gallery.cleaner.organizer.app.viewmodel.SettingsViewModel
 
 class SettingsFragment : Fragment() {
@@ -21,6 +23,7 @@ class SettingsFragment : Fragment() {
     private var _b: FragmentSettingsBinding? = null
     private val b get() = _b!!
     private val vm: SettingsViewModel by viewModels()
+    private var activeDialog: AlertDialog? = null
 
     override fun onCreateView(
         i: LayoutInflater, c: ViewGroup?, s: Bundle?
@@ -42,24 +45,33 @@ class SettingsFragment : Fragment() {
     private fun observeSettings() {
         vm.themeMode.observe(viewLifecycleOwner) { mode ->
             b.tvThemeValue.text = when (mode) {
-                1 -> "Light"
-                2 -> "Dark"
-                else -> "System"
+                1 -> getString(R.string.theme_light)
+                2 -> getString(R.string.theme_dark)
+                else -> getString(R.string.theme_system)
             }
         }
 
+        vm.appLanguage.observe(viewLifecycleOwner) { tag ->
+            val effectiveTag = tag.ifBlank { LocaleHelper.getCurrentLanguageTag() }
+            b.tvLanguageValue.text = LocaleHelper.getDisplayNameForTag(requireContext(), effectiveTag)
+        }
+
         vm.confirmDelete.observe(viewLifecycleOwner) { enabled ->
-            if (b.switchConfirmDelete.isChecked != enabled) b.switchConfirmDelete.isChecked =
-                enabled
+            if (b.switchConfirmDelete.isChecked != enabled) {
+                b.switchConfirmDelete.isChecked = enabled
+            }
         }
 
         vm.safeDelete.observe(viewLifecycleOwner) { enabled ->
-            if (b.switchSafeDelete.isChecked != enabled) b.switchSafeDelete.isChecked = enabled
+            if (b.switchSafeDelete.isChecked != enabled) {
+                b.switchSafeDelete.isChecked = enabled
+            }
         }
 
         vm.storageWarning.observe(viewLifecycleOwner) { enabled ->
-            if (b.switchStorageWarning.isChecked != enabled) b.switchStorageWarning.isChecked =
-                enabled
+            if (b.switchStorageWarning.isChecked != enabled) {
+                b.switchStorageWarning.isChecked = enabled
+            }
         }
 
         vm.largeFileThreshold.observe(viewLifecycleOwner) { bytes ->
@@ -72,13 +84,27 @@ class SettingsFragment : Fragment() {
 
     private fun setupClickListeners() {
         b.rowTheme.setOnClickListener {
-            val options = arrayOf("Follow system", "Light", "Dark")
+            val options = arrayOf(
+                getString(R.string.theme_follow_system),
+                getString(R.string.theme_light),
+                getString(R.string.theme_dark)
+            )
             val current = vm.themeMode.value ?: 0
-            MaterialAlertDialogBuilder(requireContext()).setTitle("Theme")
+            activeDialog?.dismiss()
+            activeDialog = MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.settings_theme)
                 .setSingleChoiceItems(options, current) { d, i ->
                     vm.setThemeMode(i)
                     d.dismiss()
-                }.show()
+                }
+                .show()
+        }
+
+        b.rowLanguage.setOnClickListener {
+            val intent = Intent(requireContext(), com.smart.gallery.cleaner.organizer.app.activities.LanguageActivity::class.java).apply {
+                putExtra(com.smart.gallery.cleaner.organizer.app.activities.LanguageActivity.EXTRA_IS_ONBOARDING, false)
+            }
+            startActivity(intent)
         }
 
         b.switchConfirmDelete.setOnCheckedChangeListener { _, checked ->
@@ -89,7 +115,9 @@ class SettingsFragment : Fragment() {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S && checked) {
                 b.switchSafeDelete.isChecked = false
                 Snackbar.make(
-                    b.root, "Safe delete (Trash) requires Android 12 or later", Snackbar.LENGTH_LONG
+                    b.root,
+                    getString(R.string.safe_delete_requires_android_12),
+                    Snackbar.LENGTH_LONG
                 ).show()
             } else {
                 vm.setSafeDelete(checked)
@@ -108,54 +136,66 @@ class SettingsFragment : Fragment() {
             val currentBytes = vm.largeFileThreshold.value ?: 5_242_880L
             val currentIndex = bytes.indexOfFirst { it == currentBytes }.coerceAtLeast(0)
 
-            MaterialAlertDialogBuilder(requireContext()).setTitle("Large file threshold")
+            activeDialog?.dismiss()
+            activeDialog = MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.settings_large_threshold)
                 .setSingleChoiceItems(options, currentIndex) { d, i ->
                     vm.setLargeFileThreshold(bytes[i])
                     d.dismiss()
-                }.show()
+                }
+                .show()
         }
 
         b.rowAbout.setOnClickListener {
-            findNavController().navigate(R.id.action_settings_to_about)
+            safeNavigate(R.id.action_settings_to_about)
         }
+
         b.rowPrivacy.setOnClickListener {
-            findNavController().navigate(R.id.action_settings_to_privacy)
+            safeNavigate(R.id.action_settings_to_privacy)
         }
 
         b.rowRateApp.setOnClickListener {
-            try {
+            runCatching {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
                         "market://details?id=${requireContext().packageName}".toUri()
                     )
                 )
-            } catch (_: Exception) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        "https://play.google.com/store/apps/details?id=${requireContext().packageName}".toUri()
+            }.onFailure {
+                runCatching {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            "https://play.google.com/store/apps/details?id=${requireContext().packageName}".toUri()
+                        )
                     )
-                )
+                }
             }
         }
 
         b.rowShareApp.setOnClickListener {
-            startActivity(
-                Intent.createChooser(
-                    Intent(Intent.ACTION_SEND).apply {
-                        type = "text/plain"
-                        putExtra(
-                            Intent.EXTRA_TEXT,
-                            "https://play.google.com/store/apps/details?id=${requireContext().packageName}"
-                        )
-                    }, "Share app"
+            runCatching {
+                startActivity(
+                    Intent.createChooser(
+                        Intent(Intent.ACTION_SEND).apply {
+                            type = "text/plain"
+                            putExtra(
+                                Intent.EXTRA_TEXT,
+                                "https://play.google.com/store/apps/details?id=${requireContext().packageName}"
+                            )
+                        },
+                        getString(R.string.settings_share_app)
+                    )
                 )
-            )
+            }
         }
     }
 
     override fun onDestroyView() {
-        super.onDestroyView(); _b = null
+        activeDialog?.dismiss()
+        activeDialog = null
+        super.onDestroyView()
+        _b = null
     }
 }

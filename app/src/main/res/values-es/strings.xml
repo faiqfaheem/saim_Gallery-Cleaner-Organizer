@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Limpiador y Organizador de Galería</string>
+
+    <string name="splash_tagline">Limpieza IA • Organiza • Libera Espacio</string>
+    <string name="splash_privacy_note">IA 100% en tu dispositivo • Sin recopilar datos</string>
+
+    <string name="home_title">Limpiador IA de Galería</string>
+    <string name="home_tap_scan">Toca Escanear para analizar</string>
+    <string name="home_just_scanned">Recién escaneado con IA</string>
+    <string name="home_scan_failed">Error al escanear — toca para reintentar</string>
+    <string name="action_scan">Escanear</string>
+    <string name="action_rescan">Volver a escanear</string>
+    <string name="internal_storage">Almacenamiento interno</string>
+    <string name="storage_of_format">de %1$s · %2$s libres</string>
+    <string name="storage_available_format">%1$s disponibles</string>
+    <string name="storage_almost_full_warning">¡Almacenamiento casi lleno! Usa Limpieza Inteligente IA.</string>
+    <string name="label_used">usado</string>
+    <string name="label_used_cap">Usado</string>
+    <string name="label_free_cap">Libre</string>
+    <string name="label_total">Total</string>
+    <string name="label_photos">Fotos</string>
+    <string name="label_files">Archivos</string>
+    <string name="action_view_trash">Ver Papelera</string>
+    <string name="section_clean_up">Limpieza Inteligente</string>
+    <string name="label_ten_categories">10 categorías</string>
+
+    <string name="ai_badge">IA</string>
+    <string name="ai_smart_clean_title">Limpieza Inteligente IA</string>
+    <string name="ai_smart_clean_banner_desc">Puntuación de salud y limpieza en 1 toque</string>
+    <string name="ai_on_device_subtitle">Análisis inteligente 100% en el dispositivo</string>
+    <string name="ai_analyzing_title">La IA está analizando tu galería…</string>
+    <string name="ai_analyzing_desc">Detectando duplicados, desenfoque, mala luz y mejores fotos</string>
+    <string name="ai_health_score_label">Salud de la Galería</string>
+    <string name="ai_health_excellent">Excelente estado</string>
+    <string name="ai_health_good">Buen estado</string>
+    <string name="ai_health_needs_cleanup">Necesita limpieza</string>
+    <string name="ai_reclaimable_summary">%1$s recuperables · %2$d elementos</string>
+    <string name="ai_recommendations_title">Recomendaciones de IA</string>
+    <string name="ai_rec_old_screenshots">Capturas antiguas (+30 días)</string>
+    <string name="ai_clean_now">Limpiar con IA ahora</string>
+    <string name="ai_clean_now_size">Limpiar IA · Liberar %1$s</string>
+    <string name="ai_gallery_optimized_title">¡Tu galería está optimizada!</string>
+    <string name="ai_gallery_optimized_desc">La IA no encontró fotos borrosas ni duplicadas.</string>
+
+    <string name="ai_organizer_title">Organizador IA</string>
+    <string name="ai_organizer_subtitle">Agrupado automáticamente por IA</string>
+    <string name="ai_organizing_title">La IA está organizando tus fotos…</string>
+    <string name="ai_organizing_desc">Detectando retratos, documentos, naturaleza y mejores fotos</string>
+    <string name="ai_cat_portraits">Retratos y Personas</string>
+    <string name="ai_cat_documents">Documentos y Notas</string>
+    <string name="ai_cat_nature">Naturaleza y Paisajes</string>
+    <string name="ai_cat_social">Memes y Social</string>
+    <string name="ai_cat_best_shots">Mejores Fotos IA</string>
+
+    <string name="dark_photos">Mala iluminación</string>
+    <string name="large_files">Archivos grandes</string>
+    <string name="duplicates">Fotos duplicadas</string>
+    <string name="similar_photos">Fotos similares</string>
+    <string name="blurry_photos">Fotos borrosas</string>
+    <string name="screenshots">Capturas de pantalla</string>
+    <string name="videos">Videos</string>
+    <string name="downloads">Descargas</string>
+    <string name="whatsapp_short">WhatsApp</string>
+    <string name="whatsapp_media">Multimedia de WhatsApp</string>
+
+    <string name="card_desc_ai_organizer">Álbumes inteligentes IA</string>
+    <string name="card_desc_dark_photos">Muy oscuras o quemadas</string>
+    <string name="card_desc_large_files">Fotos y videos más pesados</string>
+    <string name="card_desc_duplicates">Copias exactas</string>
+    <string name="card_desc_similar">Selector IA Mejor Foto</string>
+    <string name="card_desc_blurry">Fotos desenfocadas</string>
+    <string name="card_desc_screenshots">Pantallas capturadas</string>
+    <string name="card_desc_videos">Todos los videos</string>
+    <string name="card_desc_downloads">Archivos descargados</string>
+    <string name="card_desc_whatsapp">Imágenes y videos</string>
+
+    <string name="scan_step_photos">Cargando fotos…</string>
+    <string name="scan_step_videos">Cargando videos…</string>
+    <string name="scan_step_large_files">Buscando archivos grandes…</string>
+    <string name="scan_step_screenshots">Escaneando capturas…</string>
+    <string name="scan_step_downloads">Escaneando descargas…</string>
+    <string name="scan_step_whatsapp">Escaneando WhatsApp…</string>
+    <string name="scan_step_duplicates">Buscando duplicados…</string>
+    <string name="scan_step_similar">IA comparando fotos similares…</string>
+    <string name="scan_step_blurry">IA detectando fotos borrosas…</string>
+    <string name="scan_step_dark_photos">IA revisando iluminación…</string>
+    <string name="scan_step_finalizing">Calculando puntuación IA…</string>
+
+    <string name="storage_analysis">Análisis de almacenamiento</string>
+    <string name="storage_reading">Leyendo almacenamiento…</string>
+    <string name="storage_overview">Resumen de almacenamiento</string>
+    <string name="storage_categories">Categorías</string>
+    <string name="storage_system_other">Sistema y otros</string>
+    <string name="storage_internal_total">Interno · %1$s en total</string>
+    <string name="storage_used_format">%1$s usados</string>
+    <string name="storage_free_format">%1$s libres</string>
+    <string name="storage_used_pct_format">%1$s usado</string>
+
+    <string name="ai_smart_search_title">Búsqueda Inteligente IA</string>
+    <string name="search_hint_ai">Busca por nombre, álbum, blurry, dark, doc…</string>
+    <string name="state_searching">Buscando…</string>
+    <string name="search_no_results">Sin resultados</string>
+    <string name="search_empty_for_query">No se encontraron archivos para «%1$s»</string>
+    <string name="search_results_for">%1$d resultados para «%2$s»</string>
+    <string name="filter_images">Imágenes</string>
+    <string name="filter_gifs">GIFs</string>
+    <string name="filter_dark">Oscuras</string>
+
+    <string name="select_all">Seleccionar todo</string>
+    <string name="deselect_all">Deseleccionar todo</string>
+    <string name="action_sort">Ordenar</string>
+    <string name="action_all">Todo</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_delete_all">Eliminar todo</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_clear">Limpiar</string>
+    <string name="action_restore">Restaurar</string>
+    <string name="action_continue">Continuar</string>
+    <string name="action_keep_best">Conservar mejor</string>
+    <string name="action_cancelled">Acción cancelada</string>
+
+    <string name="badge_blurry">Borrosa</string>
+    <string name="badge_keep">Conservar</string>
+    <string name="badge_best_shot">★ Mejor</string>
+
+    <string name="sort_dialog_title">Ordenar por</string>
+    <string name="sort_newest">Más recientes</string>
+    <string name="sort_oldest">Más antiguos</string>
+    <string name="sort_largest">Más grandes</string>
+    <string name="sort_smallest">Más pequeños</string>
+    <string name="sort_name">Nombre A-Z</string>
+
+    <string name="settings_section_appearance">APARIENCIA</string>
+    <string name="settings_section_safety">SEGURIDAD</string>
+    <string name="settings_section_scan">ESCANEO</string>
+    <string name="settings_section_alerts">ALERTAS</string>
+    <string name="settings_section_info">INFORMACIÓN</string>
+
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_desc">Tema Día, Noche o Sistema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_follow_system">Seguir sistema</string>
+    <string name="theme_light">Claro (Día)</string>
+    <string name="theme_dark">Oscuro (Noche)</string>
+
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_desc">Elige el idioma de la app</string>
+    <string name="lang_system_default">Predeterminado del sistema</string>
+    <string name="language_screen_title">Elegir idioma</string>
+    <string name="language_screen_subtitle">Selecciona tu idioma preferido</string>
+    <string name="language_search_hint">Buscar idioma…</string>
+    <string name="action_apply_language">Aplicar idioma</string>
+
+    <string name="settings_confirm_delete">Confirmar antes de eliminar</string>
+    <string name="settings_confirm_delete_desc">Mostrar confirmación antes de borrar</string>
+    <string name="settings_safe_delete">Borrado seguro (Papelera)</string>
+    <string name="settings_safe_delete_desc">Mover a la Papelera en lugar de borrar</string>
+    <string name="safe_delete_requires_android_12">Requiere Android 12 o superior</string>
+    <string name="settings_large_threshold">Umbral de archivo grande</string>
+    <string name="settings_large_threshold_desc">Archivos mayores serán marcados</string>
+    <string name="settings_storage_warning">Alerta de almacenamiento</string>
+    <string name="settings_storage_warning_desc">Avisar cuando el espacio esté casi lleno</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="settings_rate_app">Calificar esta app</string>
+    <string name="settings_share_app">Compartir app</string>
+
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_storage">Espacio</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="cd_app_icon">Ícono de la app</string>
+    <string name="cd_file_thumbnail">Miniatura</string>
+    <string name="cd_navigate_back">Volver</string>
+
+    <string name="state_loading">Cargando…</string>
+    <string name="state_scanning">Escaneando…</string>
+    <string name="state_scanning_desc">Buscando archivos en tu dispositivo</string>
+    <string name="state_empty_title">¡Todo limpio!</string>
+    <string name="state_empty_desc">No se encontraron archivos en esta categoría</string>
+    <string name="freed_space_success">Se liberaron %1$s</string>
+    <string name="moved_to_trash_success">Movido a Papelera · %1$s recuperables</string>
+    <string name="error_delete_failed">No se pudieron eliminar algunos archivos</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="items_size_format">%1$d elementos · %2$s</string>
+    <string name="will_be_freed_format">Se liberarán %1$s</string>
+    <string name="selected_of_total_format">%1$d de %2$d seleccionados</string>
+    <string name="about_version_format">Versión %1$s</string>
+
+    <string name="action_delete_all_duplicates">Eliminar todos los duplicados</string>
+    <string name="action_delete_all_similar">Conservar mejor y limpiar extras</string>
+    <string name="action_delete_copies">Eliminar copias</string>
+    <string name="duplicates_tip_banner">Toca una foto para conservarla; las demás se eliminarán.</string>
+    <string name="similar_tip_banner">La IA eligió la ★ Mejor Foto. Toca otra para cambiar.</string>
+    <string name="duplicates_loading_title">Buscando duplicados…</string>
+    <string name="duplicates_loading_desc">Comparando archivos mediante MD5</string>
+    <string name="similar_loading_title">IA buscando fotos similares…</string>
+    <string name="similar_loading_desc">Analizando similitud visual y Mejor Foto</string>
+    <string name="duplicates_empty_title">Sin duplicados</string>
+    <string name="duplicates_empty_desc">Tu galería no tiene fotos duplicadas</string>
+    <string name="similar_empty_title">Sin fotos similares</string>
+    <string name="similar_empty_desc">No hay grupos de fotos similares</string>
+    <string name="groups_wasted_summary">%1$d grupos · %2$s desperdiciados</string>
+    <string name="duplicate_group_header">%1$d copias · %2$s desperdiciados</string>
+    <string name="similar_group_header">%1$d similares · %2$s recuperables</string>
+    <string name="delete_group_copies_message">Conservar la copia seleccionada y liberar %1$s.</string>
+
+    <string name="trash_title">Papelera</string>
+    <string name="trash_empty_action">Vaciar Papelera</string>
+    <string name="trash_auto_delete_banner">Los elementos se eliminan tras 30 días</string>
+    <string name="trash_empty_title">La Papelera está vacía</string>
+    <string name="trash_empty_dialog_title">¿Vaciar Papelera?</string>
+    <string name="trash_restore_dialog_title">¿Restaurar %1$d elemento(s)?</string>
+    <string name="trash_restore_dialog_msg">Los archivos volverán a su ubicación original.</string>
+    <string name="delete_dialog_message">Se eliminarán %1$d archivos (%2$s) permanentemente.</string>
+    <string name="move_to_trash_dialog_message">Se moverán %1$d archivos (%2$s) a la Papelera.\nRecupéralos en 30 días.</string>
+
+    <string name="perm_title">Permiso de fotos y videos requerido</string>
+    <string name="perm_rationale_msg">Necesitamos acceso a tus fotos y videos para buscar duplicados y archivos grandes.</string>
+    <string name="perm_denied_title">Permiso denegado</string>
+    <string name="perm_denied_msg">Activa el permiso de fotos y videos en Ajustes de la app.</string>
+    <string name="perm_grant">Conceder acceso</string>
+    <string name="perm_not_now">Ahora no</string>
+    <string name="perm_open_settings">Abrir Ajustes</string>
+
+    <string name="privacy_last_updated">Última actualización: julio 2026</string>
+    <string name="privacy_banner_title">Tu privacidad está protegida</string>
+    <string name="privacy_banner_desc">Todo el procesamiento IA ocurre en tu dispositivo.\nNunca recopilamos ni subimos datos.</string>
+    <string name="privacy_accept_continue">Aceptar y continuar</string>
+    <string name="privacy_decline">Rechazar</string>
+
+    <string name="label_total_size">Tamaño total</string>
+    <string name="label_total_files">Total archivos</string>
+
+    <plurals name="selected_files_count">
+        <item quantity="one">1 archivo seleccionado</item>
+        <item quantity="other">%d archivos seleccionados</item>
+    </plurals>
+    <plurals name="delete_dialog_title">
+        <item quantity="one">¿Eliminar %d archivo?</item>
+        <item quantity="other">¿Eliminar %d archivos?</item>
+    </plurals>
+    <plurals name="delete_group_copies_title">
+        <item quantity="one">¿Eliminar 1 copia duplicada?</item>
+        <item quantity="other">¿Eliminar %d copias duplicadas?</item>
+    </plurals>
+    <plurals name="items_count">
+        <item quantity="one">1 elemento</item>
+        <item quantity="other">%d elementos</item>
+    </plurals>
+
+    <!-- Daily Localized Notifications -->
+    <string name="notif_channel_name">Avisos diarios de limpieza</string>
+    <string name="notif_channel_desc">Recordatorios diarios para limpiar duplicados, fotos borrosas y liberar espacio.</string>
+    <string name="notif_daily_title_1">Libera espacio con un solo toque</string>
+    <string name="notif_daily_msg_1">Ejecuta Limpieza Inteligente AI para detectar duplicados, fotos borrosas y capturas antiguas.</string>
+    <string name="notif_daily_title_2">¿Fotos duplicadas ocupando espacio?</string>
+    <string name="notif_daily_msg_2">Las copias idénticas llenan tu almacenamiento sin darte cuenta. Escanea y conserva solo la original.</string>
+    <string name="notif_daily_title_3">Quédate solo con la mejor foto</string>
+    <string name="notif_daily_msg_3">¿Muchas fotos en ráfaga? Deja que la IA elija la toma más nítida y elimine las sobrantes.</string>
+    <string name="notif_daily_title_4">Elimina fotos borrosas y desenfocadas</string>
+    <string name="notif_daily_msg_4">Detecta automáticamente tomas movidas para mantener tu galería impecable y ordenada.</string>
+    <string name="notif_daily_title_5">Revisa la puntuación de salud de tu galería</string>
+    <string name="notif_daily_msg_5">Consulta tu estado diario con IA y recupera espacio con recomendaciones inteligentes.</string>
+    <string name="notif_daily_title_6">¿Se acumulan las capturas de pantalla?</string>
+    <string name="notif_daily_msg_6">Revisa capturas antiguas que ya no necesitas y bórralas en segundos.</string>
+    <string name="notif_daily_title_7">Encuentra videos pesados fácilmente</string>
+    <string name="notif_daily_msg_7">Los videos grandes llenan tu teléfono rápido. Revisa los archivos más pesados para liberar espacio.</string>
+    <string name="notif_daily_title_8">Limpia archivos multimedia de WhatsApp</string>
+    <string name="notif_daily_msg_8">Memes y videos reenviados se acumulan rápido. Limpia lo que no necesitas en un momento.</string>
+    <string name="notif_daily_title_9">¿Fotos muy oscuras o sobreexpuestas?</string>
+    <string name="notif_daily_msg_9">La detección de mala iluminación con IA localiza fotos oscuras o quemadas para limpiarlas fácil.</string>
+    <string name="notif_daily_title_10">Explora tus álbumes organizados por IA</string>
+    <string name="notif_daily_msg_10" formatted="false">Mira Retratos, Documentos, Naturaleza y Mejores Fotos ordenados 100% sin conexión en tu dispositivo.</string>
+</resources>

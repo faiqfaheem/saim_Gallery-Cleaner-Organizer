@@ -20,26 +20,42 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_8sdp"
             android:paddingEnd="@dimen/_16sdp"
-            android:paddingTop="@dimen/_7sdp"
             android:paddingBottom="@dimen/_8sdp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:text="Search"
-                android:textColor="@color/on_background"
-                android:textSize="@dimen/_20ssp"
-                android:textStyle="bold"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ai_smart_search_title"
+                    android:textColor="@color/on_background"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_ai_sparkle"
+                    app:tint="@color/ai_accent" />
+            </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_48sdp"
+                android:layout_height="@dimen/_46sdp"
                 app:cardBackgroundColor="@color/surface_variant"
-                app:cardCornerRadius="24dp"
+                app:cardCornerRadius="@dimen/_23sdp"
                 app:cardElevation="0dp"
-                app:strokeWidth="0dp">
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -55,7 +71,7 @@
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:contentDescription="@null"
                         android:src="@drawable/ic_search"
-                        app:tint="@color/on_surface_variant"/>
+                        app:tint="@color/primary" />
 
                     <EditText
                         android:id="@+id/et_search"
@@ -63,25 +79,25 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@null"
-                        android:hint="Search photos and videos…"
+                        android:hint="@string/search_hint_ai"
                         android:imeOptions="actionSearch"
                         android:inputType="text"
                         android:maxLines="1"
                         android:textColor="@color/on_surface"
                         android:textColorHint="@color/on_surface_variant"
-                        android:textSize="@dimen/_13ssp"/>
+                        android:textSize="@dimen/_12ssp" />
 
                     <ImageView
                         android:id="@+id/btn_clear"
                         android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@null"
+                        android:contentDescription="@string/action_clear"
                         android:padding="@dimen/_8sdp"
                         android:src="@drawable/ic_close"
                         android:visibility="gone"
                         app:tint="@color/on_surface_variant"
-                        tools:visibility="visible"/>
+                        tools:visibility="visible" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
@@ -103,36 +119,69 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all"
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_32sdp"
+                    android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="All"
-                    android:textSize="@dimen/_11ssp"/>
+                    android:text="@string/action_all"
+                    android:textSize="@dimen/_11ssp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_images"
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_32sdp"
-                    android:text="Images"
-                    android:textSize="@dimen/_11ssp"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_images"
+                    android:textSize="@dimen/_11ssp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_videos"
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_32sdp"
-                    android:text="Videos"
-                    android:textSize="@dimen/_11ssp"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/videos"
+                    android:textSize="@dimen/_11ssp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_gifs"
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_32sdp"
-                    android:text="GIFs"
-                    android:textSize="@dimen/_11ssp"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_gifs"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ai_blurry"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/badge_blurry"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ai_dark"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_dark"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ai_docs"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_cat_documents"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ai_best"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_cat_best_shots"
+                    android:textSize="@dimen/_11ssp" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 
@@ -165,16 +214,16 @@
                     android:layout_height="@dimen/_32sdp"
                     android:layout_gravity="center"
                     android:indeterminate="true"
-                    android:indeterminateTint="@color/primary"/>
+                    android:indeterminateTint="@color/primary" />
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:text="Searching…"
+                android:text="@string/state_searching"
                 android:textColor="@color/on_surface_variant"
-                android:textSize="@dimen/_12ssp"/>
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
 
         <!-- Empty State View -->
@@ -184,8 +233,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingStart="@dimen/_32sdp"
-            android:paddingEnd="@dimen/_32sdp"
+            android:paddingHorizontal="@dimen/_32sdp"
             android:visibility="gone">
 
             <com.google.android.material.card.MaterialCardView
@@ -202,17 +250,17 @@
                     android:layout_gravity="center"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_search"
-                    app:tint="@color/on_surface_variant"/>
+                    app:tint="@color/on_surface_variant" />
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_18sdp"
-                android:text="No results"
+                android:text="@string/search_no_results"
                 android:textColor="@color/on_background"
-                android:textSize="@dimen/_18ssp"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_empty_query"
@@ -222,8 +270,7 @@
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.4"
                 android:textColor="@color/on_surface_variant"
-                android:textSize="@dimen/_12ssp"
-                tools:text="No files found for &quot;cats&quot;"/>
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
 
         <!-- Search Results View -->
@@ -239,12 +286,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_4sdp"
                 android:paddingEnd="@dimen/_16sdp"
-                android:paddingTop="@dimen/_6sdp"
                 android:paddingBottom="@dimen/_4sdp"
                 android:textColor="@color/on_surface_variant"
-                android:textSize="@dimen/_11ssp"
-                tools:text="All photos &amp; videos"/>
+                android:textSize="@dimen/_11ssp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -254,7 +300,24 @@
                 android:clipToPadding="false"
                 android:paddingStart="@dimen/_6sdp"
                 android:paddingEnd="@dimen/_6sdp"
-                android:paddingBottom="@dimen/_80sdp"/>
+                android:paddingBottom="@dimen/_76sdp" />
         </LinearLayout>
+
+        <!-- Floating Delete Bar when items selected -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete_selected"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:text="@string/action_delete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/error"
+            app:cornerRadius="@dimen/_22sdp"
+            app:icon="@drawable/ic_delete"
+            app:iconGravity="textStart" />
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
